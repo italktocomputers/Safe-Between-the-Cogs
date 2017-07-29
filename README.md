@@ -12,6 +12,24 @@ Working example can be found on [facebook](https://apps.facebook.com/18936966508
 * Need to use better audio clips
 * Facebook sharing
 
+### Gameplay
+
+![GamePlay](gameplay/gameplay1.png)
+
+![GamePlay](gameplay/gameplay2.png)
+
+![GamePlay](gameplay/gameplay3.png)
+
+![GamePlay](gameplay/gameplay4.png)
+
+![GamePlay](gameplay/gameplay5.png)
+
+![GamePlay](gameplay/gameplay6.png)
+
+![GamePlay](gameplay/gameplay7.png)
+
+![GamePlay](gameplay/gameplay8.png)
+
 ### License
 
 Copyright (C) 2017  Andrew Schools
