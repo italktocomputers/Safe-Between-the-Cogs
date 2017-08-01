@@ -48,8 +48,8 @@ abstract public class Level : MonoBehaviour {
 
         ApplicationModel.saveLastTime(thisTime, name);
 
-        starsCollectedLabel.text = GetComponent<StarManager>().getTotalStarsCollected().ToString();
-        starsTotalLabel.text = GetComponent<StarManager>().getTotalStars().ToString();
+        starsCollectedLabel.text = GetComponent<StarManager>().totalStarsCollected.ToString();
+        starsTotalLabel.text = GetComponent<StarManager>().totalStars.ToString();
 
         if (bestTime == 0 || thisTime < bestTime) {
             // This is the new best time!

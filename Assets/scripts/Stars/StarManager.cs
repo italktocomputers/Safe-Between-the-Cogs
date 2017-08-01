@@ -8,8 +8,28 @@ public class StarManager : MonoBehaviour {
     public GameObject UI_StarsTotal;
     public GameObject[] stars;
     public int sceneIndex;
-    private int starsCollected = 0;
-    private int totalStars = 0;
+    private int _totalStarsCollected = 0;
+    private int _totalStars = 0;
+
+    public int totalStarsCollected {
+        get {
+            return _totalStarsCollected;
+        }
+        set {
+            _totalStarsCollected = value;
+            UI_StarsCollected.GetComponent<Text>().text = value.ToString();
+        }
+    }
+
+    public int totalStars {
+        get {
+            return _totalStars;
+        }
+        set {
+            _totalStars = value;
+            UI_StarsTotal.GetComponent<Text>().text = value.ToString();
+        }
+    }
 
     private void Start() {
         int i = 1;
@@ -26,39 +46,8 @@ public class StarManager : MonoBehaviour {
             }
         }
 
-        setStarsCollected(starsCollected);
-        setStarsTotal(stars.Length);
-    }
-
-    protected void setStarsCollected(int stars) {
-        starsCollected = stars;
-        UI_StarsCollected.GetComponent<Text>().text = stars.ToString();
-    }
-
-    protected void setStarsTotal(int stars) {
-        totalStars = stars;
-        UI_StarsTotal.GetComponent<Text>().text = stars.ToString();
-    }
-
-    protected void incStarsCollected() {
-        starsCollected++;
-        UI_StarsCollected.GetComponent<Text>().text = starsCollected.ToString();
-    }
-
-    public int getTotalStarsCollected() {
-        int i = 1;
-
-        foreach (GameObject star in stars) {
-            if (ApplicationModel.getStarCollected(sceneIndex, i++) == 1) {
-                starsCollected++;
-            }
-        }
-
-        return starsCollected;
-    }
-
-    public int getTotalStars() {
-        return totalStars;
+        totalStarsCollected = starsCollected;
+        totalStars = stars.Length;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -66,7 +55,7 @@ public class StarManager : MonoBehaviour {
             GetComponent<AudioSource>().clip = Config.audioCoin;
             GetComponent<AudioSource>().Play();
             ApplicationModel.setStarCollected(sceneIndex, other.GetComponent<Star>().index);
-            incStarsCollected();
+            ++totalStarsCollected;
         }
     }
 
