@@ -39,7 +39,7 @@ public class ApplicationModel : MonoBehaviour {
     }
 
     static public string getCopyrightString() {
-        return "Copyright 2017, Andrew Schools.  All rights reserved.  Build 06.02.2017.1";
+        return "Copyright 2017, Andrew Schools.  All rights reserved.  v0.14-alpha";
     }
 
     static public string getQuality() {
