@@ -200,6 +200,30 @@ public class Level1 : Level {
     }
 
     public void actionsForCheckpoint6() {
+        gear6.SetActive(false);
+
+        gear7.SetActive(true);
+        gear8.SetActive(true);
+        gear9.SetActive(true);
+        gear10.SetActive(true);
+        gear11.SetActive(true);
+
+        gearBlur5.SetActive(true);
+        gearBlur6.SetActive(true);
+        gearBlur7.SetActive(true);
+        gearBlur8.SetActive(true);
+
+        platform2.SetActive(true);
+
+        hammer3.SetActive(true);
+        hammer4.SetActive(true);
+        hammer5.SetActive(true);
+        hammer6.SetActive(true);
+        hammer7.SetActive(true);
+        hammer8.SetActive(true);
+    }
+
+    public void actionsForCheckpoint7() {
         gear7.SetActive(false);
         gear8.SetActive(false);
         gear9.SetActive(false);
@@ -225,7 +249,7 @@ public class Level1 : Level {
         hammer8.SetActive(true);
     }
 
-    public void actionsForCheckpoint7() {
+    public void actionsForCheckpoint8() {
         gear12.SetActive(true);
 
         hammer3.SetActive(true);
@@ -238,7 +262,7 @@ public class Level1 : Level {
         gear13.SetActive(true);
     }
 
-    public void actionsForCheckpoint8() {
+    public void actionsForCheckpoint9() {
         gear11.SetActive(false);
         gear12.SetActive(false);
 
@@ -261,7 +285,7 @@ public class Level1 : Level {
         gearBlur12.SetActive(true);
     }
 
-    public void actionsForCheckpoint9() {
+    public void actionsForCheckpoint10() {
         gear13.SetActive(false);
 
         gearBlur9.SetActive(false);
