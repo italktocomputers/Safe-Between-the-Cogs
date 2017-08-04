@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Trigger an event after coordinates have been surpassed.  
-public class EnableAt : MonoBehaviour {
+// Notify subscribers when specified GameObject approaches this GameObject
+// at distance specified.
+public class NotifySubscribersWhenApproaching : MonoBehaviour {
     public GameObject hero;
     public float distanceTrigger;
     protected bool triggered = false;
-    public UnityEvent e;
+    public UnityEvent[] e;
 
     private void Update () {
         if (triggered == false) {
@@ -16,7 +17,10 @@ public class EnableAt : MonoBehaviour {
 
             if (currentDistance <= distanceTrigger) {
                 triggered = true;
-                e.Invoke();
+
+                foreach (var sub in e) {
+                    sub.Invoke();
+                }
             }
         }
     }

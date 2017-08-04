@@ -66,18 +66,18 @@ public class Level2 : Level {
     }
 
     public void toggleDonut1Rotation() {
-        Rotate r = donut1.GetComponent<Rotate>();
-        SpriteRenderer ren = switch1.GetComponent<SpriteRenderer>();
+        Rotate rotate = donut1.GetComponent<Rotate>();
+        SpriteRenderer renderer = switch1.GetComponent<SpriteRenderer>();
         Sprite on = Resources.Load("BlueBlock", typeof(Sprite)) as Sprite;
         Sprite off = Resources.Load("YellowBlock", typeof(Sprite)) as Sprite;
 
-        if (r.direction == "left") {
-            r.direction = "right";
-            ren.sprite = on;
+        if (rotate.direction == "left") {
+            rotate.direction = "right";
+            renderer.sprite = off;
         }
         else {
-            r.direction = "left";
-            ren.sprite = off;
+            rotate.direction = "left";
+            renderer.sprite = on;
         }
     }
 }
