@@ -30,6 +30,10 @@ public class HintManager : MonoBehaviour {
         if (other.gameObject.tag == "Hint") {
             string hintMsg = hints[(other.GetComponent<Hint>().index)];
             showHint(hintMsg);
+
+            // When colliding with a Hint, the Hint will be removed from the scene so not to display the
+            // same hint over and over.
+            other.gameObject.SetActive(false);
         }
     }
 }
