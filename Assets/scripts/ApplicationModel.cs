@@ -100,7 +100,12 @@ public class ApplicationModel : MonoBehaviour {
     }
 
     static public void setLastSavedCheckpoint(CheckPointType checkpoint, int level) {
-        PlayerPrefs.SetString("LastSavedCheckpoint_" + level.ToString(), checkpoint.ToString());
+        if (checkpoint == null) {
+            PlayerPrefs.SetString("LastSavedCheckpoint_" + level.ToString(), null);
+        }
+        else {
+            PlayerPrefs.SetString("LastSavedCheckpoint_" + level.ToString(), checkpoint.ToString());
+        }
     }
 
     static public int getStarCollected(int level, int num) {
