@@ -9,6 +9,9 @@ public class Level2 : Level {
     public GameObject donut1;
     public GameObject switch1;
 
+    public GameObject platform1;
+    public GameObject platform2;
+
     override public void init() {
 
     }
@@ -18,11 +21,11 @@ public class Level2 : Level {
     }
 
     public void enablePlatform1() {
-        //platform1.GetComponent<Oscolate>().enabled = true;
+        platform1.GetComponent<Oscolate>().enabled = true;
     }
 
     public void enablePlatform2() {
-        //platform2.GetComponent<Oscolate>().enabled = true;
+        platform2.GetComponent<Oscolate>().enabled = true;
     }
 
     public void actionsForCheckpoint1() {
