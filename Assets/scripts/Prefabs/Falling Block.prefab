@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4207006549223186}
   - component: {fileID: 212694027049141168}
   - component: {fileID: 61062867990783752}
-  - component: {fileID: 114867729486499078}
   - component: {fileID: 50306737996037608}
+  - component: {fileID: 114579323372511522}
   m_Layer: 0
   m_Name: Falling Block
   m_TagString: Ground
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &114867729486499078
+--- !u!114 &114579323372511522
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,10 +96,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1555147897884594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 482f492f152c21b4f993520968de0c51, type: 3}
+  m_Script: {fileID: 11500000, guid: afb6df82d71597745b7a635436991ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.5
+  e:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114680715697335478, guid: 59346fbffad4bb240b9c7be046691fec,
+          type: 2}
+        m_MethodName: AddDynamicBodyTypeToRigidBody
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1555147897884594}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  delay: 500
 --- !u!212 &212694027049141168
 SpriteRenderer:
   m_ObjectHideFlags: 1
