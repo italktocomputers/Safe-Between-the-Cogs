@@ -12,5 +12,17 @@ public class CommonFunctions: MonoBehaviour {
         Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
+
+    public void toggleRotationSpeed(GameObject go) {
+        Rotate rotate = go.GetComponent<Rotate>();
+        RotationToggleType rotationToggleType = go.GetComponent<RotationToggleType>();
+
+        if (rotationToggleType.speed1 == rotate.speed) {
+            rotate.speed = rotationToggleType.speed2;
+        }
+        else {
+            rotate.speed = rotationToggleType.speed1;
+        }
+    }
 }
 
