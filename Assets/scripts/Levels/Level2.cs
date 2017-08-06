@@ -33,14 +33,6 @@ public class Level2 : Level {
         return "2";
     }
 
-    public void enablePlatform1() {
-        //platform1.GetComponent<Oscolate>().enabled = true;
-    }
-
-    public void enablePlatform2() {
-        //platform2.GetComponent<Oscolate>().enabled = true;
-    }
-
     public void actionsForCheckpoint1() {
         
     }
@@ -79,5 +71,9 @@ public class Level2 : Level {
 
     public void actionsForCheckpoint10() {
         
+    }
+
+    public void toggleDonut1Rotation() {
+        donut1.GetComponent<Direction>().setDirection("left");
     }
 }

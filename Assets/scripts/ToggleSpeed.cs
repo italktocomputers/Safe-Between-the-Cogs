@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ToggleSpeed : MonoBehaviour {
-    public GameObject com;
     public float[] speeds;
     private int index = 0;
 
