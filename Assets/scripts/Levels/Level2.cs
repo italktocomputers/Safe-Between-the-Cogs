@@ -34,11 +34,11 @@ public class Level2 : Level {
     }
 
     public void enablePlatform1() {
-        platform1.GetComponent<Oscolate>().enabled = true;
+        //platform1.GetComponent<Oscolate>().enabled = true;
     }
 
     public void enablePlatform2() {
-        platform2.GetComponent<Oscolate>().enabled = true;
+        //platform2.GetComponent<Oscolate>().enabled = true;
     }
 
     public void actionsForCheckpoint1() {
@@ -79,71 +79,5 @@ public class Level2 : Level {
 
     public void actionsForCheckpoint10() {
         
-    }
-
-    public void toggleDonut1Rotation() {
-        Rotate rotate = donut1.GetComponent<Rotate>();
-        SpriteRenderer renderer = switch1.GetComponent<SpriteRenderer>();
-        Sprite on = Resources.Load("BlueBlock", typeof(Sprite)) as Sprite;
-        Sprite off = Resources.Load("YellowBlock", typeof(Sprite)) as Sprite;
-
-        if (rotate.direction == "left") {
-            rotate.direction = "right";
-            renderer.sprite = off;
-        }
-        else {
-            rotate.direction = "left";
-            renderer.sprite = on;
-        }
-    }
-
-    public void toggleGear5Rotation() {
-        Rotate rotate = gear5.GetComponent<Rotate>();
-
-        if (rotate.direction == "left") {
-            rotate.direction = "right";
-        }
-        else {
-            rotate.direction = "left";
-        }
-    }
-
-    public void toggleHammer7Speed() {
-        Oscolate oscolate = hammer7.GetComponent<Oscolate>();
-
-        if (oscolate.speed1 == 2.0f) {
-            oscolate.speed1 = 3.0f;
-            oscolate.speed2 = 3.0f;
-        }
-        else {
-            oscolate.speed1 = 2.0f;
-            oscolate.speed2 = 2.0f;
-        }
-    }
-
-    public void toggleHammer8Speed() {
-        Oscolate oscolate = hammer8.GetComponent<Oscolate>();
-
-        if (oscolate.speed1 == 2.0f) {
-            oscolate.speed1 = 4.0f;
-            oscolate.speed2 = 4.0f;
-        }
-        else {
-            oscolate.speed1 = 2.0f;
-            oscolate.speed2 = 2.0f;
-        }
-    }
-
-    public void toggleHammer9Speed() {
-        Oscolate oscolate = hammer9.GetComponent<Oscolate>();
-
-        if (oscolate.speed1 == 2.0f) {
-            oscolate.speed1 = 5.0f;
-            oscolate.speed2 = 5.0f;
-        }
-        else {
-            oscolate.speed1 = 2.0f;
-            oscolate.speed2 = 2.0f;
-        }
     }
 }

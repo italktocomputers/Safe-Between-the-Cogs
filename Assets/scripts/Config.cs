@@ -14,10 +14,12 @@ public class Config : MonoBehaviour {
     public static AudioClip audioSplash;
     public static AudioClip audioSwim;
     public static AudioClip audioCoin;
+    public static AudioClip audioHammer;
 
     public static void init() {
         audioSplash = Instantiate(Resources.Load("audio/water-splash", typeof(AudioClip))) as AudioClip;
         audioSwim = Instantiate(Resources.Load("audio/water-swim", typeof(AudioClip))) as AudioClip;
         audioCoin = Instantiate(Resources.Load("audio/coin", typeof(AudioClip))) as AudioClip;
+        audioHammer = Instantiate(Resources.Load("audio/hammer", typeof(AudioClip))) as AudioClip;
     }
 }

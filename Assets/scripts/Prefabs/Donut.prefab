@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114761843163649034}
   - component: {fileID: 60273695511656558}
   - component: {fileID: 82137316584278502}
+  - component: {fileID: 114270854109728684}
+  - component: {fileID: 114830137264971492}
   m_Layer: 0
   m_Name: Donut
   m_TagString: Gear
@@ -262,6 +264,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114270854109728684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683320580964168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d29b6d16e470642981858e5a1644c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: right
 --- !u!114 &114761843163649034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -273,10 +287,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2cc3e020fb0d441915f4a18a9ce5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 11
-  direction: left
   useDistanceMoved: 0
   diameter: 0
+--- !u!114 &114830137264971492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683320580964168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182a3758c053474e9ea4fa966b56b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 10
 --- !u!212 &212446995240865028
 SpriteRenderer:
   m_ObjectHideFlags: 1

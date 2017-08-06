@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class CommonFunctions: MonoBehaviour {
+public class CommonFunctions : MonoBehaviour {
     public void exitGame() {
         SceneManager.LoadScene(0);
     }
@@ -13,16 +13,9 @@ public class CommonFunctions: MonoBehaviour {
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
-    public void toggleRotationSpeed(GameObject go) {
-        Rotate rotate = go.GetComponent<Rotate>();
-        RotationToggleType rotationToggleType = go.GetComponent<RotationToggleType>();
-
-        if (rotationToggleType.speed1 == rotate.speed) {
-            rotate.speed = rotationToggleType.speed2;
-        }
-        else {
-            rotate.speed = rotationToggleType.speed1;
-        }
+    public void playHammerSound(GameObject objectToControl) {
+        objectToControl.GetComponent<AudioSource>().clip = Config.audioHammer;
+        objectToControl.GetComponent<AudioSource>().Play();
     }
 }
 

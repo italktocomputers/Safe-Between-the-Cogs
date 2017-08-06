@@ -23,6 +23,10 @@ GameObject:
   - component: {fileID: 114354972542987408}
   - component: {fileID: 60455493808777534}
   - component: {fileID: 114862544593113516}
+  - component: {fileID: 114224976099895138}
+  - component: {fileID: 114462799639678224}
+  - component: {fileID: 114093738086696916}
+  - component: {fileID: 114381200806956556}
   m_Layer: 0
   m_Name: Purple Star
   m_TagString: Star
@@ -83,6 +87,32 @@ PolygonCollider2D:
       - {x: 0.2280159, y: -0.02260685}
       - {x: 0.12376404, y: 0.05311632}
       - {x: 0.14770508, y: 0.22739315}
+--- !u!114 &114093738086696916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722235332350004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a48f67cff785ff40a0277c4cf96176d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directions:
+  - right
+  - left
+--- !u!114 &114224976099895138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722235332350004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d29b6d16e470642981858e5a1644c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: left
 --- !u!114 &114354972542987408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,10 +124,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2cc3e020fb0d441915f4a18a9ce5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
-  direction: left
   useDistanceMoved: 0
   diameter: 0
+--- !u!114 &114381200806956556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722235332350004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac67e456501aea40b806c10611fc597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  e:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114093738086696916}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  interval: 3000
+--- !u!114 &114462799639678224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722235332350004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182a3758c053474e9ea4fa966b56b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 10
 --- !u!114 &114862544593113516
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -101,22 +101,23 @@ public class Level1 : Level {
     }
 
     public void enablePlatform1() {
-        platform1.GetComponent<Oscolate>().enabled = true;
+        //platform1.GetComponent<Oscolate>().enabled = true;
     }
 
     public void enablePlatform2() {
-        platform2.GetComponent<Oscolate>().enabled = true;
+        //platform2.GetComponent<Oscolate>().enabled = true;
     }
 
     public void switchRotationOfGear() {
         Rotate r = gear12.GetComponent<Rotate>();
-
+        /*
         if (r.direction == "left") {
             r.direction = "right";
         }
         else {
             r.direction = "left";
         }
+        */
     }
 
     public void actionsForCheckpoint1() {
