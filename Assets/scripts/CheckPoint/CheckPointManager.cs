@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class CheckPointManager : MonoBehaviour {
     public bool spawningEnabled = true;
+    public int level;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "SpawnPoint") {
-            ApplicationModel.setPosXOfSavedCheckpoint(GetComponent<Transform>().position.x);
-            ApplicationModel.setPosYOfSavedCheckpoint(GetComponent<Transform>().position.y);
-            ApplicationModel.setTimeOfSavedCheckpoint(GetComponent<Timer>().getSeconds());
+            CheckPointType checkpoint = new CheckPointType(
+                GetComponent<Transform>().position.x, 
+                GetComponent<Transform>().position.y,
+                GetComponent<Timer>().getSeconds()
+            );
+
+            ApplicationModel.setLastSavedCheckpoint(checkpoint, level);
             other.gameObject.GetComponent<CheckPoint>().e.Invoke();
             showCheckPointMsg();
         }
@@ -31,21 +36,22 @@ public class CheckPointManager : MonoBehaviour {
             ApplicationModel.killMessage = "";
         }
 
-        // Spawn player last checkpoint reached
-        GetComponent<Timer>().setTimer(ApplicationModel.getTimeOfSavedCheckpoint());
-        GetComponent<Jumbotron>().add("Spawning to last checkpoint!");
 
-        if (ApplicationModel.getPosXOfSavedCheckpoint() != 0) {
+        CheckPointType checkpoint = ApplicationModel.getLastSavedCheckpoint(level);
+
+        if (checkpoint != null) {
             transform.position = new Vector2(
-                ApplicationModel.getPosXOfSavedCheckpoint(),
-                ApplicationModel.getPosYOfSavedCheckpoint()
+                checkpoint.x,
+                checkpoint.y
             );
+
+            // Spawn player last checkpoint reached
+            GetComponent<Timer>().setTimer(checkpoint.time);
+            GetComponent<Jumbotron>().add("Spawning to last checkpoint!");
         }
     }
 
     public void clearSavedCheckPoint() {
-        ApplicationModel.setTimeOfSavedCheckpoint(0.0f);
-        ApplicationModel.setPosXOfSavedCheckpoint(0);
-        ApplicationModel.setPosYOfSavedCheckpoint(0);
+        ApplicationModel.setLastSavedCheckpoint(null, level);
     }
 }

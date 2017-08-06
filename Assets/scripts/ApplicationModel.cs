@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using System.Globalization;
 
 public class ApplicationModel : MonoBehaviour {
     static public bool dev = false;
@@ -82,28 +83,29 @@ public class ApplicationModel : MonoBehaviour {
         PlayerPrefs.SetInt("Setting_SaveScoreToLB", choice);
     }
 
-    static public float getPosXOfSavedCheckpoint() {
-        return PlayerPrefs.GetFloat("PosXOfSavedCheckpoint");
+    static public CheckPointType getLastSavedCheckpoint(int level) {
+        String data = PlayerPrefs.GetString("LastSavedCheckpoint_" + level.ToString());
+        String[] parts = data.Split(',');
+
+        if (parts.Length != 3) {
+            return null;
+        }
+        else {
+            float x = float.Parse(parts[0], CultureInfo.InvariantCulture.NumberFormat);
+            float y = float.Parse(parts[1], CultureInfo.InvariantCulture.NumberFormat);
+            float time = float.Parse(parts[2], CultureInfo.InvariantCulture.NumberFormat);
+
+            return new CheckPointType(x, y, time);
+        }
     }
 
-    static public float getPosYOfSavedCheckpoint() {
-        return PlayerPrefs.GetFloat("PosYOfSavedCheckpoint");
-    }
-
-    static public void setPosXOfSavedCheckpoint(float x) {
-        PlayerPrefs.SetFloat("PosXOfSavedCheckpoint", x);
-    }
-
-    static public void setPosYOfSavedCheckpoint(float y) {
-        PlayerPrefs.SetFloat("PosYOfSavedCheckpoint", y);
-    }
-
-    static public float getTimeOfSavedCheckpoint() {
-        return PlayerPrefs.GetFloat("TimeOfSavedCheckpoint");
-    }
-
-    static public void setTimeOfSavedCheckpoint(float time) {
-        PlayerPrefs.SetFloat("TimeOfSavedCheckpoint", time);
+    static public void setLastSavedCheckpoint(CheckPointType checkpoint, int level) {
+        if (checkpoint == null) {
+            PlayerPrefs.SetString("LastSavedCheckpoint_" + level.ToString(), null);
+        }
+        else {
+            PlayerPrefs.SetString("LastSavedCheckpoint_" + level.ToString(), checkpoint.ToString());
+        }
     }
 
     static public int getStarCollected(int level, int num) {

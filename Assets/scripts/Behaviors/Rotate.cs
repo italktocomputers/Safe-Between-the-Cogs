@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Rotate : MonoBehaviour {
-    public float speed;
-    public string direction;
     protected float speedToUse;
     public bool useDistanceMoved;
     protected float distanceTraveled;
@@ -12,31 +10,31 @@ public class Rotate : MonoBehaviour {
     public float diameter;
 
     private void Start() {
-        lastPosition = transform.position;
-
-        switch (direction) {
-            case "left":
-            case "right":
-                break;
-            default:
-                throw new System.Exception("Direction can only be 'left' or 'right'.");
+        if (GetComponent<Speed>() == null) {
+            throw new System.Exception("Object must have a Speed Component!");
         }
+
+        if (GetComponent<Direction>() == null) {
+            throw new System.Exception("Object must have a Target Component!");
+        }
+
+        lastPosition = transform.position;
     }
 
     private void Update() {
         distanceTraveled = Vector2.Distance(transform.position, lastPosition);
         lastPosition = transform.position;
 
-        if (direction == "right") {
-            speedToUse = -speed;
+        if (GetComponent<Direction>().value == DirectionUnit.Clockwise) {
+            speedToUse = -GetComponent<Speed>().value;
         }
         else {
-            speedToUse = speed;
+            speedToUse = GetComponent<Speed>().value;
         }
 
         if (useDistanceMoved) {
             // Rotation speed is determined by distance moved
-            if (direction == "right") {
+            if (GetComponent<Direction>().value == DirectionUnit.Clockwise) {
                 transform.Rotate(0.0f, 0.0f, -((distanceTraveled / (diameter * 3.14f) * 360)));
             } 
             else {

@@ -25,6 +25,10 @@ public class WelcomeScene : MonoBehaviour {
         SceneManager.LoadScene("Scene1");
     }
 
+    public void onStartGameButton2Click() {
+        SceneManager.LoadScene("Scene2");
+    }
+
     public void onHowToPlayButtonClick() {
         SceneManager.LoadScene("HowToPlay");
     }

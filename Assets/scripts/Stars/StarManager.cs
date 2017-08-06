@@ -52,8 +52,6 @@ public class StarManager : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Star") {
-            GetComponent<AudioSource>().clip = Config.audioCoin;
-            GetComponent<AudioSource>().Play();
             ApplicationModel.setStarCollected(sceneIndex, other.GetComponent<Star>().index);
             ++totalStarsCollected;
         }
