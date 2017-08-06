@@ -74,6 +74,6 @@ public class Level2 : Level {
     }
 
     public void toggleDonut1Rotation() {
-        //donut1.GetComponent<Direction>().setDirection("ccw");
+        donut1.GetComponent<Direction>().setDirection(DirectionUnit.Counterclockwise);
     }
 }
