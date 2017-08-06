@@ -241,9 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a48f67cff785ff40a0277c4cf96176d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directions:
-  - right
-  - left
+  directions: 0000000001000000
 --- !u!114 &114224976099895138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d29b6d16e470642981858e5a1644c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: left
+  value: 0
 --- !u!114 &114354972542987408
 MonoBehaviour:
   m_ObjectHideFlags: 1

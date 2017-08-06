@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d29b6d16e470642981858e5a1644c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: left
+  value: CCW
 --- !u!114 &114564593569229298
 MonoBehaviour:
   m_ObjectHideFlags: 1

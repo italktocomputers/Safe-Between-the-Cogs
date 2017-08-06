@@ -100,26 +100,6 @@ public class Level1 : Level {
         return "1";
     }
 
-    public void enablePlatform1() {
-        //platform1.GetComponent<Oscolate>().enabled = true;
-    }
-
-    public void enablePlatform2() {
-        //platform2.GetComponent<Oscolate>().enabled = true;
-    }
-
-    public void switchRotationOfGear() {
-        Rotate r = gear12.GetComponent<Rotate>();
-        /*
-        if (r.direction == "left") {
-            r.direction = "right";
-        }
-        else {
-            r.direction = "left";
-        }
-        */
-    }
-
     public void actionsForCheckpoint1() {
         gear1.SetActive(true);
         gear2.SetActive(true);

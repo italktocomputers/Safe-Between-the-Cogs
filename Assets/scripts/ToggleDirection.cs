@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ToggleDirection : MonoBehaviour {
-    public string[] directions;
+    public DirectionUnit[] directions;
     private int index = 0;
 
     public void toggle() {

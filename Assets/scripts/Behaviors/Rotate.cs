@@ -19,21 +19,13 @@ public class Rotate : MonoBehaviour {
         }
 
         lastPosition = transform.position;
-
-        switch (GetComponent<Direction>().value) {
-            case "left":
-            case "right":
-                break;
-            default:
-                throw new System.Exception("Direction can only be 'left' or 'right'.");
-        }
     }
 
     private void Update() {
         distanceTraveled = Vector2.Distance(transform.position, lastPosition);
         lastPosition = transform.position;
 
-        if (GetComponent<Direction>().value == "right") {
+        if (GetComponent<Direction>().value == DirectionUnit.Clockwise) {
             speedToUse = -GetComponent<Speed>().value;
         }
         else {
@@ -42,7 +34,7 @@ public class Rotate : MonoBehaviour {
 
         if (useDistanceMoved) {
             // Rotation speed is determined by distance moved
-            if (GetComponent<Direction>().value == "right") {
+            if (GetComponent<Direction>().value == DirectionUnit.Clockwise) {
                 transform.Rotate(0.0f, 0.0f, -((distanceTraveled / (diameter * 3.14f) * 360)));
             } 
             else {
