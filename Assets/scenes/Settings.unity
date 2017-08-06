@@ -1516,6 +1516,8 @@ GameObject:
   - component: {fileID: 684463642}
   - component: {fileID: 684463641}
   - component: {fileID: 684463640}
+  - component: {fileID: 684463644}
+  - component: {fileID: 684463643}
   m_Layer: 0
   m_Name: Gear (2)
   m_TagString: Gear
@@ -1534,8 +1536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2cc3e020fb0d441915f4a18a9ce5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
-  direction: right
   useDistanceMoved: 0
   diameter: 0
 --- !u!212 &684463641
@@ -1591,6 +1591,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684463643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684463639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182a3758c053474e9ea4fa966b56b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 5
+--- !u!114 &684463644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684463639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d29b6d16e470642981858e5a1644c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
 --- !u!1 &767554094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3001,6 +3025,8 @@ GameObject:
   - component: {fileID: 1514268826}
   - component: {fileID: 1514268825}
   - component: {fileID: 1514268827}
+  - component: {fileID: 1514268829}
+  - component: {fileID: 1514268828}
   m_Layer: 0
   m_Name: Gear (1)
   m_TagString: Gear
@@ -3072,10 +3098,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2cc3e020fb0d441915f4a18a9ce5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
-  direction: left
   useDistanceMoved: 0
   diameter: 0
+--- !u!114 &1514268828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514268824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182a3758c053474e9ea4fa966b56b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 5
+--- !u!114 &1514268829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514268824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d29b6d16e470642981858e5a1644c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1
 --- !u!1 &1546644626
 GameObject:
   m_ObjectHideFlags: 0
@@ -3270,6 +3318,8 @@ GameObject:
   - component: {fileID: 1649308748}
   - component: {fileID: 1649308747}
   - component: {fileID: 1649308746}
+  - component: {fileID: 1649308750}
+  - component: {fileID: 1649308749}
   m_Layer: 0
   m_Name: GearSmall
   m_TagString: Untagged
@@ -3288,8 +3338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2cc3e020fb0d441915f4a18a9ce5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
-  direction: left
   useDistanceMoved: 0
   diameter: 0
 --- !u!212 &1649308747
@@ -3345,6 +3393,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649308749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649308745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182a3758c053474e9ea4fa966b56b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 5
+--- !u!114 &1649308750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649308745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d29b6d16e470642981858e5a1644c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
 --- !u!1 &1700742004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3914,6 +3986,8 @@ GameObject:
   - component: {fileID: 2000300591}
   - component: {fileID: 2000300590}
   - component: {fileID: 2000300592}
+  - component: {fileID: 2000300594}
+  - component: {fileID: 2000300593}
   m_Layer: 0
   m_Name: Gear
   m_TagString: Gear
@@ -3985,7 +4059,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2cc3e020fb0d441915f4a18a9ce5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
-  direction: right
   useDistanceMoved: 0
   diameter: 0
+--- !u!114 &2000300593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000300589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182a3758c053474e9ea4fa966b56b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 5
+--- !u!114 &2000300594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000300589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d29b6d16e470642981858e5a1644c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
