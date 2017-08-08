@@ -151,6 +151,7 @@ public class Level1 : Level {
 
         gear6.SetActive(true);
         gear7.SetActive(true);
+        gear8.SetActive(true);
 
         gearBlur3.SetActive(false);
         gearBlur4.SetActive(false);
