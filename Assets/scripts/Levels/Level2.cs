@@ -9,8 +9,15 @@ public class Level2 : Level {
     public GameObject gear3;
     public GameObject gear4;
     public GameObject gear5;
+    public GameObject gear6;
+    public GameObject gear7;
+    public GameObject gear8;
+    public GameObject gear9;
+
     public GameObject donut1;
+
     public GameObject switch1;
+    public GameObject switch2;
 
     public GameObject platform1;
     public GameObject platform2;
@@ -24,6 +31,11 @@ public class Level2 : Level {
     public GameObject hammer7;
     public GameObject hammer8;
     public GameObject hammer9;
+    public GameObject hammer10;
+
+    public GameObject OscillatingBrick1;
+    public GameObject OscillatingBrick2;
+    public GameObject OscillatingBrick3;
 
     override public void init() {
 
@@ -73,7 +85,19 @@ public class Level2 : Level {
         
     }
 
-    public void toggleDonut1Rotation() {
+    public void switchDonut1Rotation() {
         donut1.GetComponent<Direction>().setDirection(DirectionUnit.Counterclockwise);
+    }
+
+    public void switchGear7Direction() {
+        gear7.GetComponent<Direction>().setDirection(DirectionUnit.Counterclockwise);
+    }
+
+    public void switchGear8Direction() {
+        gear8.GetComponent<Direction>().setDirection(DirectionUnit.Clockwise);
+    }
+
+    public void switchGear9Direction() {
+        gear9.GetComponent<Direction>().setDirection(DirectionUnit.Counterclockwise);
     }
 }
