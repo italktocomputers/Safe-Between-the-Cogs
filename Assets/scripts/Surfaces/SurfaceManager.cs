@@ -25,7 +25,6 @@ public class SurfaceManager : MonoBehaviour {
     }
 
     public void sendAction(InputAction action) {
-        Debug.Log(currentSurface);
         if (currentSurface != null) {
             switch (action) {
                 case InputAction.Jump:
