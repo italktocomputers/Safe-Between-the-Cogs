@@ -53,6 +53,9 @@ public class SurfaceManager : MonoBehaviour {
     }
 
     private void OnCollisionExit2D(Collision2D other) {
+        // Whenever we leave a surface, we default to air controls.
+        currentSurface = surfaces["Air"];
+
         if (surfaces.ContainsKey(other.gameObject.tag)) {
             surfaces[other.gameObject.tag].OnExit(other);
         }
@@ -65,6 +68,9 @@ public class SurfaceManager : MonoBehaviour {
     }
 
     private void OnTriggerExit2D(Collider2D other) {
+        // Whenever we leave a surface, we default to air controls.
+        currentSurface = surfaces["Air"];
+
         if (surfaces.ContainsKey(other.gameObject.tag)) {
             surfaces[other.gameObject.tag].OnExitTrigger(other);
         }

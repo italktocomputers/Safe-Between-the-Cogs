@@ -9,8 +9,8 @@ public class CheckPointManager : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "SpawnPoint") {
             CheckPointType checkpoint = new CheckPointType(
-                GetComponent<Transform>().position.x, 
-                GetComponent<Transform>().position.y,
+                other.gameObject.GetComponent<Transform>().position.x,
+                other.gameObject.GetComponent<Transform>().position.y,
                 GetComponent<Timer>().getSeconds()
             );
 
