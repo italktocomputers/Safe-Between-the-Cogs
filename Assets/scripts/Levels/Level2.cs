@@ -11,6 +11,8 @@ public class Level2 : Level {
     public GameObject gear5;
     public GameObject gear6;
     public GameObject gear7;
+    public GameObject gear8;
+    public GameObject gear9;
 
     public GameObject donut1;
 
@@ -83,11 +85,19 @@ public class Level2 : Level {
         
     }
 
-    public void toggleDonut1Rotation() {
+    public void switchDonut1Rotation() {
         donut1.GetComponent<Direction>().setDirection(DirectionUnit.Counterclockwise);
     }
 
-    public void toggleGear7Direction() {
+    public void switchGear7Direction() {
         gear7.GetComponent<Direction>().setDirection(DirectionUnit.Counterclockwise);
+    }
+
+    public void switchGear8Direction() {
+        gear8.GetComponent<Direction>().setDirection(DirectionUnit.Clockwise);
+    }
+
+    public void switchGear9Direction() {
+        gear9.GetComponent<Direction>().setDirection(DirectionUnit.Counterclockwise);
     }
 }
