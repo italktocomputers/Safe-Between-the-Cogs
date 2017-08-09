@@ -49,7 +49,7 @@ public class Level1 : Level {
     public GameObject gearBlur11;
     public GameObject gearBlur12;
 
-    override public void init() {
+    public override void disableALLGameObjects() {
         gear1.SetActive(false);
         gear2.SetActive(false);
         gear3.SetActive(false);
@@ -94,6 +94,10 @@ public class Level1 : Level {
         gearBlur10.SetActive(false);
         gearBlur11.SetActive(false);
         gearBlur12.SetActive(false);
+    }
+
+    override public void init() {
+        
     }
 
     override public string getLevelName() {
