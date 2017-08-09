@@ -37,6 +37,10 @@ public class Level2 : Level {
     public GameObject OscillatingBrick2;
     public GameObject OscillatingBrick3;
 
+    public override void disableALLGameObjects() {
+        
+    }
+
     override public void init() {
 
     }

@@ -17,12 +17,19 @@ abstract public class Level : MonoBehaviour {
     public GameObject starsTotalObj;
 
     abstract public void init();
+    abstract public void disableALLGameObjects();
     abstract public string getLevelName();
 
     private void Start() {
+        CheckPointManager checkpointManager = GetComponent<CheckPointManager>();
+
         GetComponent<Timer>().startTimer();
 
         Config.init();
+
+        if (checkpointManager.spawningEnabled == true) {
+            disableALLGameObjects();
+        }
 
         init();
     }
