@@ -14,13 +14,22 @@ public class Level2 : Level {
     public GameObject gear8;
     public GameObject gear9;
 
+    public GameObject gearBlur1;
+    public GameObject gearBlur2;
+    public GameObject gearBlur3;
+    public GameObject gearBlur4;
+    public GameObject gearBlur5;
+    public GameObject gearBlur6;
+
     public GameObject donut1;
 
     public GameObject switch1;
     public GameObject switch2;
+    public GameObject switch3;
 
     public GameObject platform1;
     public GameObject platform2;
+    public GameObject platform3;
 
     public GameObject hammer1;
     public GameObject hammer2;
@@ -32,10 +41,23 @@ public class Level2 : Level {
     public GameObject hammer8;
     public GameObject hammer9;
     public GameObject hammer10;
+    public GameObject hammer11;
+    public GameObject hammer12;
+    public GameObject hammer13;
+    public GameObject hammer14;
+    public GameObject hammer15;
+    public GameObject hammer16;
+    public GameObject hammer17;
+    public GameObject hammer18;
+    public GameObject hammer19;
+    public GameObject hammer20;
+    public GameObject hammer21;
 
     public GameObject OscillatingBrick1;
     public GameObject OscillatingBrick2;
     public GameObject OscillatingBrick3;
+    public GameObject OscillatingBrick4;
+    public GameObject OscillatingBrick5;
 
     public override void disableALLGameObjects() {
         
