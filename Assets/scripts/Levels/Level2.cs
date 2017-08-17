@@ -60,7 +60,56 @@ public class Level2 : Level {
     public GameObject OscillatingBrick5;
 
     public override void disableALLGameObjects() {
-        
+        gear1.SetActive(false);
+        gear2.SetActive(false);
+        gear3.SetActive(false);
+        gear4.SetActive(false);
+        gear5.SetActive(false);
+        gear6.SetActive(false);
+        gear7.SetActive(false);
+        gear8.SetActive(false);
+        gear9.SetActive(false);
+
+        gearBlur1.SetActive(false);
+        gearBlur2.SetActive(false);
+        gearBlur3.SetActive(false);
+        gearBlur4.SetActive(false);
+        gearBlur5.SetActive(false);
+        gearBlur6.SetActive(false);
+
+        donut1.SetActive(false);
+
+        platform1.SetActive(false);
+        platform2.SetActive(false);
+        platform3.SetActive(false);
+
+        hammer1.SetActive(false);
+        hammer2.SetActive(false);
+        hammer3.SetActive(false);
+        hammer4.SetActive(false);
+        hammer5.SetActive(false);
+        hammer6.SetActive(false);
+        hammer7.SetActive(false);
+        hammer8.SetActive(false);
+        hammer9.SetActive(false);
+        hammer10.SetActive(false);
+        hammer11.SetActive(false);
+        hammer12.SetActive(false);
+        hammer13.SetActive(false);
+        hammer14.SetActive(false);
+        hammer15.SetActive(false);
+        hammer16.SetActive(false);
+        hammer17.SetActive(false);
+        hammer18.SetActive(false);
+        hammer19.SetActive(false);
+        hammer20.SetActive(false);
+        hammer21.SetActive(false);
+
+        OscillatingBrick1.SetActive(false);
+        OscillatingBrick2.SetActive(false);
+        OscillatingBrick3.SetActive(false);
+        OscillatingBrick4.SetActive(false);
+        OscillatingBrick5.SetActive(false);
     }
 
     override public void init() {
@@ -72,43 +121,154 @@ public class Level2 : Level {
     }
 
     public void actionsForCheckpoint1() {
-        
+        gear1.SetActive(true);
+        gear2.SetActive(true);
+        gearBlur1.SetActive(true);
+        gearBlur2.SetActive(true);
     }
 
     public void actionsForCheckpoint2() {
-        
+        gear1.SetActive(false);
+
+        gear2.SetActive(true);
+
+        donut1.SetActive(true);
+
+        hammer1.SetActive(true);
+        hammer2.SetActive(true);
+        hammer3.SetActive(true);
+        hammer4.SetActive(true);
+        hammer5.SetActive(true);
+        hammer6.SetActive(true);
+
     }
 
     public void actionsForCheckpoint3() {
-        
+        gear1.SetActive(false);
+        gear2.SetActive(false);
+
+        gearBlur1.SetActive(false);
+        gearBlur2.SetActive(false);
+
+        hammer1.SetActive(true);
+        hammer2.SetActive(true);
+        hammer3.SetActive(true);
+        hammer4.SetActive(true);
+        hammer5.SetActive(true);
+        hammer6.SetActive(true);
+
+        gear3.SetActive(true);
+        gear4.SetActive(true);
     }
 
     public void actionsForCheckpoint4() {
-        
+        donut1.SetActive(false);
+
+        gear5.SetActive(true);
+
+        hammer4.SetActive(true);
+        hammer5.SetActive(true);
+        hammer6.SetActive(true);
+
+        gear3.SetActive(true);
+        gear4.SetActive(true);
+
+        gearBlur3.SetActive(true);
+        gearBlur4.SetActive(true);
+        gearBlur5.SetActive(true);
+        gearBlur6.SetActive(true);
+
+        platform1.SetActive(true);
+        platform2.SetActive(true);
     }
 
     public void actionsForCheckpoint5() {
-        
+        gear3.SetActive(false);
+
+        hammer4.SetActive(false);
+        hammer5.SetActive(false);
+        hammer6.SetActive(false);
+
+        gear5.SetActive(true);
+        gear6.SetActive(true);
+
+        hammer7.SetActive(true);
+        hammer8.SetActive(true);
+        hammer9.SetActive(true);
+
+        OscillatingBrick1.SetActive(true);
+        OscillatingBrick2.SetActive(true);
+        OscillatingBrick3.SetActive(true);
+
     }
 
     public void actionsForCheckpoint6() {
-        
+        gear3.SetActive(false);
+        gear4.SetActive(false);
+
+        gearBlur3.SetActive(false);
+        gearBlur4.SetActive(false);
+        gearBlur5.SetActive(false);
+        gearBlur6.SetActive(false);
+
+        OscillatingBrick1.SetActive(true);
+        OscillatingBrick2.SetActive(true);
+        OscillatingBrick3.SetActive(true);
+
+        gear5.SetActive(true);
+        gear6.SetActive(true);
+
+        hammer7.SetActive(true);
+        hammer8.SetActive(true);
+        hammer9.SetActive(true);
+
+        gear7.SetActive(true);
+        gear8.SetActive(true);
+        gear9.SetActive(true);
     }
 
     public void actionsForCheckpoint7() {
-        
+        gear5.SetActive(false);
+        gear6.SetActive(false);
+
+        hammer7.SetActive(false);
+        hammer8.SetActive(false);
+        hammer9.SetActive(false);
+
+        OscillatingBrick1.SetActive(false);
+        OscillatingBrick2.SetActive(false);
+        OscillatingBrick3.SetActive(false);
+
+        gear7.SetActive(true);
+        gear8.SetActive(true);
+        gear9.SetActive(true);
+
+        platform3.SetActive(true);
+
+        hammer10.SetActive(true);
     }
 
     public void actionsForCheckpoint8() {
-        
-    }
+        gear7.SetActive(false);
 
-    public void actionsForCheckpoint9() {
-        
-    }
+        gear8.SetActive(true);
+        gear9.SetActive(true);
 
-    public void actionsForCheckpoint10() {
-        
+        OscillatingBrick3.SetActive(true);
+        OscillatingBrick4.SetActive(true);
+        OscillatingBrick5.SetActive(true);
+
+        hammer11.SetActive(true);
+        hammer12.SetActive(true);
+        hammer13.SetActive(true);
+        hammer14.SetActive(true);
+        hammer15.SetActive(true);
+        hammer16.SetActive(true);
+        hammer17.SetActive(true);
+        hammer18.SetActive(true);
+        hammer19.SetActive(true);
+        hammer20.SetActive(true);
+        hammer21.SetActive(true);
     }
 
     public void switchDonut1Rotation() {
