@@ -221,35 +221,34 @@ public class Level2 : Level {
         hammer7.SetActive(true);
         hammer8.SetActive(true);
         hammer9.SetActive(true);
-
-        gear7.SetActive(true);
-        gear8.SetActive(true);
-        gear9.SetActive(true);
-    }
-
-    public void actionsForCheckpoint7() {
-        gear5.SetActive(false);
-        gear6.SetActive(false);
-
-        hammer7.SetActive(false);
-        hammer8.SetActive(false);
-        hammer9.SetActive(false);
-
-        OscillatingBrick1.SetActive(false);
-        OscillatingBrick2.SetActive(false);
-        OscillatingBrick3.SetActive(false);
+        hammer10.SetActive(true);
 
         gear7.SetActive(true);
         gear8.SetActive(true);
         gear9.SetActive(true);
 
         platform3.SetActive(true);
-
-        hammer10.SetActive(true);
     }
 
-    public void actionsForCheckpoint8() {
+    public void actionsForCheckpoint7() {
+        gear5.SetActive(false);
+        gear6.SetActive(false);
         gear7.SetActive(false);
+
+        hammer7.SetActive(false);
+        hammer8.SetActive(false);
+        hammer9.SetActive(false);
+
+        platform3.SetActive(false);
+
+        OscillatingBrick1.SetActive(false);
+        OscillatingBrick2.SetActive(false);
+        OscillatingBrick3.SetActive(false);
+
+        gear8.SetActive(true);
+        gear9.SetActive(true);
+
+        hammer10.SetActive(true);
 
         gear8.SetActive(true);
         gear9.SetActive(true);
@@ -285,5 +284,9 @@ public class Level2 : Level {
 
     public void switchGear9Direction() {
         gear9.GetComponent<Direction>().setDirection(DirectionUnit.Counterclockwise);
+    }
+
+    public void onWall5Collision() {
+        GetComponent<Jumbotron>().add("Too bad there wasn't a switch to move this!");
     }
 }
