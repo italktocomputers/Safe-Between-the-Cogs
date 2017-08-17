@@ -7409,7 +7409,7 @@ Prefab:
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4032249211195724, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_LocalPosition.x
@@ -7470,7 +7470,7 @@ Prefab:
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: actionsForCheckpoint7
+      value: actionsForCheckpoint8
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}

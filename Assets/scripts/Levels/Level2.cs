@@ -252,8 +252,27 @@ public class Level2 : Level {
 
         gear8.SetActive(true);
         gear9.SetActive(true);
+        
+        OscillatingBrick4.SetActive(true);
+        OscillatingBrick5.SetActive(true);
 
-        OscillatingBrick3.SetActive(true);
+        hammer11.SetActive(true);
+        hammer12.SetActive(true);
+        hammer13.SetActive(true);
+        hammer14.SetActive(true);
+        hammer15.SetActive(true);
+        hammer16.SetActive(true);
+        hammer17.SetActive(true);
+        hammer18.SetActive(true);
+        hammer19.SetActive(true);
+        hammer20.SetActive(true);
+        hammer21.SetActive(true);
+    }
+
+    public void actionsForCheckpoint8() {
+        gear8.SetActive(true);
+        gear9.SetActive(true);
+
         OscillatingBrick4.SetActive(true);
         OscillatingBrick5.SetActive(true);
 
