@@ -13658,6 +13658,24 @@ Prefab:
       propertyPath: stars.Array.data[28]
       value: 
       objectReference: {fileID: 717271597}
+    - target: {fileID: 1070329685563020, guid: 59346fbffad4bb240b9c7be046691fec, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224044287282526236, guid: 59346fbffad4bb240b9c7be046691fec,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 191.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888135858455246, guid: 59346fbffad4bb240b9c7be046691fec, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114342389407751598, guid: 59346fbffad4bb240b9c7be046691fec,
+        type: 2}
+      propertyPath: m_Value
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59346fbffad4bb240b9c7be046691fec, type: 2}
   m_IsPrefabParent: 0

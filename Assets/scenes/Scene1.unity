@@ -5819,6 +5819,11 @@ Prefab:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114342389407751598, guid: 59346fbffad4bb240b9c7be046691fec,
+        type: 2}
+      propertyPath: m_Value
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114638038311297122, guid: 59346fbffad4bb240b9c7be046691fec, type: 2}
     - {fileID: 114925163576043118, guid: 59346fbffad4bb240b9c7be046691fec, type: 2}
