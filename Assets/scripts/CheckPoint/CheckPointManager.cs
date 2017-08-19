@@ -60,10 +60,6 @@ public class CheckPointManager : MonoBehaviour {
         }
     }
 
-    public int SortByNameAscending(string name1, string name2) {
-        return name1.CompareTo(name2);
-    }
-
     public void populateDropDown() {
         GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("SpawnPoint");        
 
