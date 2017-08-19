@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CheckPointManager : MonoBehaviour {
     public bool spawningEnabled = true;
@@ -79,13 +80,17 @@ public class CheckPointManager : MonoBehaviour {
 
         for (int i = 0; i < checkpoints.Length; i++) {
             if (checkpoints[i].name == "CheckPoint"+ (selectedIndex+1).ToString()) {
-                spawn(
+                // Save choice and load scene
+                ApplicationModel.setLastSavedCheckpoint(
                     new CheckPointType(
                         checkpoints[i].gameObject.transform.position.x, 
                         checkpoints[i].gameObject.transform.position.y, 
                         0.0f
-                    )
+                    ),
+                    level
                 );
+
+                SceneManager.LoadScene(GetComponent<Level>().sceneIndex);
             }
         }
     }
