@@ -137,7 +137,7 @@ InputManager:
     m_Name: Cancel
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: escape
     positiveButton: escape
     altNegativeButton: 
     altPositiveButton: joystick button 9

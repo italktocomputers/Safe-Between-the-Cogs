@@ -89,6 +89,15 @@ abstract public class Level : MonoBehaviour {
         ApplicationModel.isPaused = false;
     }
 
+    public void togglePause() {
+        if (ApplicationModel.isPaused) {
+            unpause();
+        }
+        else {
+            pause();
+        }
+    }
+
     public void exitGame() {
         SceneManager.LoadScene(0);
     }
