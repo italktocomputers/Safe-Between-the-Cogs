@@ -68,10 +68,11 @@ public class CheckPointManager : MonoBehaviour {
         GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("SpawnPoint");        
 
         for (int i = 0; i < checkpoints.Length; i++) {
-            dropdown.GetComponent<Dropdown>().options.Add(new Dropdown.OptionData(checkpoints[i].name));
+            //dropdown.GetComponent<Dropdown>().options.Add(new Dropdown.OptionData(checkpoints[i].name));
+            dropdown.GetComponent<Dropdown>().options.Add(new Dropdown.OptionData((i+1).ToString()));
         }
 
-        dropdown.GetComponent<Dropdown>().options.Sort((x, y) => x.text.CompareTo(y.text));
+        //dropdown.GetComponent<Dropdown>().options.Sort((x, y) => x.text.CompareTo(y.text));
     }
 
     public void onCheckpointDropDownSelect() {
