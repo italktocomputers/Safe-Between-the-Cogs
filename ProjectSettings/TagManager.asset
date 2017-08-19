@@ -18,10 +18,10 @@ TagManager:
   - YellowBlock
   - Water
   - LevelComplete
-  - SpawnPoint
   - Hint
   - Star
   - Brush
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

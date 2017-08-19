@@ -29,9 +29,11 @@ public class InputManager : MonoBehaviour {
         if (Input.GetAxis("Jump") == 1) {
             heroScript.sendAction(InputAction.Jump);
         }
+    }
 
-        if (Input.GetAxis("Cancel") == 1) {
-            GetComponent<Level>().pause();
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape) == true) {
+            GetComponent<Level>().togglePause();
         }
 
         if (Input.GetKeyDown(KeyCode.Z) == true) {
