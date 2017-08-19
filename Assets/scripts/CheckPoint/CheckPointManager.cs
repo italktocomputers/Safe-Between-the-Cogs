@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class CheckPointManager : MonoBehaviour {
+public class CheckpointManager : MonoBehaviour {
     public bool spawningEnabled = true;
     public int level;
 
@@ -21,20 +21,20 @@ public class CheckPointManager : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "SpawnPoint") {
-            CheckPointType checkpoint = new CheckPointType(
+        if (other.gameObject.tag == "Checkpoint") {
+            CheckpointType checkpoint = new CheckpointType(
                 other.gameObject.GetComponent<Transform>().position.x,
                 other.gameObject.GetComponent<Transform>().position.y,
                 GetComponent<Timer>().getSeconds()
             );
 
             ApplicationModel.setLastSavedCheckpoint(checkpoint, level);
-            other.gameObject.GetComponent<CheckPoint>().e.Invoke();
-            showCheckPointMsg();
+            other.gameObject.GetComponent<Checkpoint>().e.Invoke();
+            showCheckpointMsg();
         }
     }
 
-    protected void showCheckPointMsg() {
+    protected void showCheckpointMsg() {
         GetComponent<Jumbotron>().add("Checkpoint reached!");
     }
 
@@ -50,19 +50,19 @@ public class CheckPointManager : MonoBehaviour {
             ApplicationModel.killMessage = "";
         }
 
-        CheckPointType checkpoint = ApplicationModel.getLastSavedCheckpoint(level);
+        CheckpointType checkpoint = ApplicationModel.getLastSavedCheckpoint(level);
 
         if (checkpoint != null) {
             // Spawn player last checkpoint reached
             GetComponent<Timer>().setTimer(checkpoint.time);
-            GetComponent<Jumbotron>().add("Spawning to last checkpoint!");
+            GetComponent<Jumbotron>().add("Loading last checkpoint!");
 
             spawn(checkpoint);
         }
     }
 
     public void populateDropDown() {
-        GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("SpawnPoint");        
+        GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");        
 
         for (int i = 0; i < checkpoints.Length; i++) {
             //dropdown.GetComponent<Dropdown>().options.Add(new Dropdown.OptionData(checkpoints[i].name));
@@ -74,15 +74,15 @@ public class CheckPointManager : MonoBehaviour {
 
     public void onCheckpointDropDownSelect() {
         int selectedIndex = dropdown.GetComponent<Dropdown>().value;
-        GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
 
         didLoadCheckpoint = true;
 
         for (int i = 0; i < checkpoints.Length; i++) {
-            if (checkpoints[i].name == "CheckPoint"+ (selectedIndex+1).ToString()) {
+            if (checkpoints[i].name == "Checkpoint"+ (selectedIndex+1).ToString()) {
                 // Save choice and load scene
                 ApplicationModel.setLastSavedCheckpoint(
-                    new CheckPointType(
+                    new CheckpointType(
                         checkpoints[i].gameObject.transform.position.x, 
                         checkpoints[i].gameObject.transform.position.y, 
                         0.0f
@@ -95,14 +95,14 @@ public class CheckPointManager : MonoBehaviour {
         }
     }
 
-    public void spawn(CheckPointType checkpoint) {
+    public void spawn(CheckpointType checkpoint) {
         transform.position = new Vector2(
             checkpoint.x,
             checkpoint.y
         );
     }
 
-    public void clearSavedCheckPoint() {
+    public void clearSavedCheckpoint() {
         ApplicationModel.setLastSavedCheckpoint(null, level);
     }
 }

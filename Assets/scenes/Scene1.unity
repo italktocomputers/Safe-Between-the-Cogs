@@ -385,7 +385,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint10
+      value: Checkpoint10
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -416,6 +416,10 @@ Prefab:
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -1278,7 +1282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint9
+      value: Checkpoint9
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -1309,6 +1313,10 @@ Prefab:
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -1704,7 +1712,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint5
+      value: Checkpoint5
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -1735,6 +1743,10 @@ Prefab:
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -1892,7 +1904,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint6
+      value: Checkpoint6
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -1928,6 +1940,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -6215,7 +6231,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint1
+      value: Checkpoint1
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -6251,6 +6267,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -7111,7 +7131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint4
+      value: Checkpoint4
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -7142,6 +7162,10 @@ Prefab:
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -9643,7 +9667,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint7
+      value: Checkpoint7
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -9674,6 +9698,10 @@ Prefab:
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -10427,7 +10455,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint3
+      value: Checkpoint3
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -10458,6 +10486,10 @@ Prefab:
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -12405,7 +12437,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint2
+      value: Checkpoint2
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -12436,6 +12468,10 @@ Prefab:
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
@@ -14883,7 +14919,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
       propertyPath: m_Name
-      value: CheckPoint8
+      value: Checkpoint8
       objectReference: {fileID: 0}
     - target: {fileID: 114390728917622782, guid: a22abe3f0d2df8947a6f267f8596a6dc,
         type: 2}
@@ -14914,6 +14950,10 @@ Prefab:
         type: 2}
       propertyPath: e.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307579073212458, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22abe3f0d2df8947a6f267f8596a6dc, type: 2}

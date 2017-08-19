@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CheckPoint : MonoBehaviour {
+public class Checkpoint : MonoBehaviour {
     public UnityEvent e;
 }

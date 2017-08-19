@@ -21,7 +21,7 @@ abstract public class Level : MonoBehaviour {
     abstract public string getLevelName();
 
     private void Start() {
-        CheckPointManager checkpointManager = GetComponent<CheckPointManager>();
+        CheckpointManager checkpointManager = GetComponent<CheckpointManager>();
 
         GetComponent<Timer>().startTimer();
 
@@ -99,7 +99,7 @@ abstract public class Level : MonoBehaviour {
     }
 
     public void clearLevelData() {
-        GetComponent<CheckPointManager>().clearSavedCheckPoint();
+        GetComponent<CheckpointManager>().clearSavedCheckpoint();
         GetComponent<StarManager>().clearSavedStars();
     }
 
