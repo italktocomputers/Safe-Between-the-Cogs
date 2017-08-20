@@ -13034,6 +13034,18 @@ Prefab:
       propertyPath: e.Array.data[0].m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_FloatArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212102597843286464, guid: c5c89f1caac1f7342942f0bec33d8589,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c3532893efb6acd4798c8d0a4a0e296f,
+        type: 3}
+    - target: {fileID: 114820450945966104, guid: c5c89f1caac1f7342942f0bec33d8589,
+        type: 2}
+      propertyPath: e.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 21300000, guid: 3313e8eb385a27249be628b8353be4a6,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5c89f1caac1f7342942f0bec33d8589, type: 2}
   m_IsPrefabParent: 0
