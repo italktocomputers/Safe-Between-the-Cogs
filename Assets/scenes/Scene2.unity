@@ -454,11 +454,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 81.7
+      value: 82.005
       objectReference: {fileID: 0}
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 11.4
+      value: 11.456
       objectReference: {fileID: 0}
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1614,11 +1614,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 92.3
+      value: 92.62
       objectReference: {fileID: 0}
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.51
+      value: 16.62
       objectReference: {fileID: 0}
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6318,7 +6318,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.63, y: 0.63}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 0.63, y: 0.63}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8386,11 +8386,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4333045058239440, guid: 16e518bfafdff034e91e258a884e7a61, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 168.91
+      value: 169.02
       objectReference: {fileID: 0}
     - target: {fileID: 4333045058239440, guid: 16e518bfafdff034e91e258a884e7a61, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 11.2
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 4333045058239440, guid: 16e518bfafdff034e91e258a884e7a61, type: 2}
       propertyPath: m_LocalPosition.z
@@ -15656,11 +15656,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 35.456497
+      value: 35.77
       objectReference: {fileID: 0}
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.5732
+      value: 16.66
       objectReference: {fileID: 0}
     - target: {fileID: 4514307507100064, guid: 3d697f9cd14fe0d449255cf6cc822a03, type: 2}
       propertyPath: m_LocalPosition.z
