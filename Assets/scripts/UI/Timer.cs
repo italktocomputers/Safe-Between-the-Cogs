@@ -51,7 +51,7 @@ public class Timer : MonoBehaviour {
 
     public static string clockify(float totalSeconds) {
         float totalMinutes = totalSeconds / 60;
-        return String.Format("{0:F0}:{1:F1}", (int)totalMinutes, totalSeconds % 60);
+        return String.Format("{0:F0}m {1:F1}s", (int)totalMinutes, totalSeconds % 60);
     }
 
     protected void updateClockDisplay() {

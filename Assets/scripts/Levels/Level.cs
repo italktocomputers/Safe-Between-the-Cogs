@@ -36,6 +36,9 @@ abstract public class Level : MonoBehaviour {
 
     public void levelComplete() {
         GetComponent<Timer>().stopTimer();
+        canvasLevelCompleted.SetActive(true);
+
+        LevelCompleteUI ui = canvasLevelCompleted.GetComponent<LevelCompleteUI>();
 
         string name = getLevelName();
 
@@ -43,38 +46,29 @@ abstract public class Level : MonoBehaviour {
         float lastTime = ApplicationModel.getLastTime(name);
         float bestTime = ApplicationModel.getBestTime(name);
 
-        Text thisTimeLabel = thisTimeGameObj.GetComponent<Text>();
-        Text lastTimeLabel = lastTimeGameObj.GetComponent<Text>();
-        Text bestTimeLabel = bestTimeGameObj.GetComponent<Text>();
-
-        Text starsCollectedLabel = starsCollectedObj.GetComponent<Text>();
-        Text starsTotalLabel = starsTotalObj.GetComponent<Text>();
-
-        thisTimeLabel.text = Timer.clockify(thisTime);
-        lastTimeLabel.text = Timer.clockify(lastTime);
+        ui.setThisTime(thisTime);
+        ui.setLastTime(lastTime);
+        ui.setBestTime(bestTime);
+        ui.setStarsCollected(GetComponent<StarManager>().totalStarsCollected);
+        ui.setTotalStars(GetComponent<StarManager>().totalStars);
 
         ApplicationModel.saveLastTime(thisTime, name);
-
-        starsCollectedLabel.text = GetComponent<StarManager>().totalStarsCollected.ToString();
-        starsTotalLabel.text = GetComponent<StarManager>().totalStars.ToString();
-
+        
         if (bestTime == 0 || thisTime < bestTime) {
             // This is the new best time!
             ApplicationModel.saveBestTime(thisTime, name);
-            bestTimeLabel.text = Timer.clockify(thisTime);
-            congratsMsg.SetActive(true);
+            //bestTimeLabel.text = Timer.clockify(thisTime);
+            //congratsMsg.SetActive(true);
 
             if (ApplicationModel.getSaveScoreToLBSetting() == 1) {
                 //FacebookHelper.SaveScore(thisTime, null);
             }
         }
         else {
-            bestTimeLabel.text = Timer.clockify(bestTime);
+            //bestTimeLabel.text = Timer.clockify(bestTime);
         }
 
         clearLevelData();
-
-        canvasLevelCompleted.SetActive(true);
     }
 
     public void pause() {
