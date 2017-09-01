@@ -159,8 +159,7 @@ public class LevelCompleteUI : MonoBehaviour {
     }
 
     public void setThisTime(float time) {
-        Debug.Log("This time: " + time);
-        Sprite[] sprites = numberToSprites(formatTime(time), map_l);
+        Sprite[] sprites = numberToSprites(Timer.clockify(time), map_l);
         this.thisTimeM1.GetComponent<Image>().sprite = sprites[0];
         this.thisTimeM2.GetComponent<Image>().sprite = sprites[1];
         this.thisTimeS1.GetComponent<Image>().sprite = sprites[2];
@@ -169,8 +168,7 @@ public class LevelCompleteUI : MonoBehaviour {
     }
 
     public void setLastTime(float time) {
-        Debug.Log("last time: " + time);
-        Sprite[] sprites = numberToSprites(formatTime(time), map_s);
+        Sprite[] sprites = numberToSprites(Timer.clockify(time), map_s);
         this.lastTimeM1.GetComponent<Image>().sprite = sprites[0];
         this.lastTimeM2.GetComponent<Image>().sprite = sprites[1];
         this.lastTimeS1.GetComponent<Image>().sprite = sprites[2];
@@ -179,8 +177,7 @@ public class LevelCompleteUI : MonoBehaviour {
     }
 
     public void setBestTime(float time) {
-        Debug.Log("Best time: " + time);
-        Sprite[] sprites = numberToSprites(formatTime(time), map_s);
+        Sprite[] sprites = numberToSprites(Timer.clockify(time), map_s);
         this.bestTimeM1.GetComponent<Image>().sprite = sprites[0];
         this.bestTimeM2.GetComponent<Image>().sprite = sprites[1];
         this.bestTimeS1.GetComponent<Image>().sprite = sprites[2];
@@ -189,7 +186,6 @@ public class LevelCompleteUI : MonoBehaviour {
     }
 
     public void setStarsCollected(int stars) {
-        Debug.Log("collected: " + stars);
         Sprite[] sprites = numberToSprites(stars.ToString(), map_l);
 
         if (stars > 9) {
@@ -204,7 +200,6 @@ public class LevelCompleteUI : MonoBehaviour {
     }
 
     public void setTotalStars(int stars) {
-        Debug.Log("total: " + stars);
         Sprite[] sprites = numberToSprites(stars.ToString(), map_l);
 
         if (stars > 9) {
@@ -218,18 +213,6 @@ public class LevelCompleteUI : MonoBehaviour {
         }
     }
 
-    private string formatTime(float time) {
-        string rPadding = "";
-        float totalMinutes = time / 60;
-
-        if (totalMinutes < 10) {
-            //rPadding = "0";
-        }
-
-        return rPadding + String.Format("{0:F1}.{1:F1}", (int)totalMinutes, time % 60);
-
-    }
-
     private Sprite[] numberToSprites(string n, Dictionary<char, Texture2D> map) {
         int i = 0;
         Sprite[] sprites = new Sprite[5];
@@ -238,6 +221,10 @@ public class LevelCompleteUI : MonoBehaviour {
         foreach (char c in cArray) {
             if (c == '.' || c == ':') {
                 continue;
+            }
+
+            if (i > 4) {
+                break;
             }
 
             Texture2D t = map[c];
