@@ -5814,6 +5814,36 @@ Prefab:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: unpause
       objectReference: {fileID: 0}
+    - target: {fileID: 114957666376624530, guid: cf921e22193c6af488c89de4e1ad163d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 744881113}
+    - target: {fileID: 114957666376624530, guid: cf921e22193c6af488c89de4e1ad163d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: unpause
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383601755801386, guid: cf921e22193c6af488c89de4e1ad163d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 744881113}
+    - target: {fileID: 114383601755801386, guid: cf921e22193c6af488c89de4e1ad163d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resetGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114214059910552824, guid: cf921e22193c6af488c89de4e1ad163d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 744881113}
+    - target: {fileID: 114214059910552824, guid: cf921e22193c6af488c89de4e1ad163d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: exitGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf921e22193c6af488c89de4e1ad163d, type: 2}
   m_IsPrefabParent: 0
