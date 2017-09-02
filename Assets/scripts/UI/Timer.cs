@@ -49,9 +49,11 @@ public class Timer : MonoBehaviour {
         time = t;
     }
 
-    public static string clockify(float totalSeconds) {
-        float totalMinutes = totalSeconds / 60;
-        return String.Format("{0:F0}:{1:F1}", (int)totalMinutes, totalSeconds % 60);
+    public static string clockify(float time) {
+        double totalMinutes = Math.Floor(time / 60);
+        double totalSeconds = time % 60;
+
+        return totalMinutes.ToString("00") + ":" + totalSeconds.ToString("00.0");
     }
 
     protected void updateClockDisplay() {
