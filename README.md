@@ -1,6 +1,6 @@
 # :video_game: Safe Between the Cogs
 
-Safe Between the Cogs is a 2D video game developed in Unity3D 5.6.  There is currently only a single level but more to come.  ALL graphics and code were developed by me.  If you would like to collabrate in anyway, let me know.
+Safe Between the Cogs is a 2D video game developed in Unity3D 2017.  There is currently only a single level but more to come.  ALL graphics and code were developed by me.  If you would like to collabrate in anyway, let me know.
 
 Working example can be found on [facebook](https://apps.facebook.com/1893696650851210).
 
