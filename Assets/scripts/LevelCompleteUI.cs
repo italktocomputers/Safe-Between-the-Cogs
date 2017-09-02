@@ -58,6 +58,10 @@ public class LevelCompleteUI : MonoBehaviour {
     private Dictionary<char, Texture2D> map_l = new Dictionary<char, Texture2D>();
     private Dictionary<char, Texture2D> map_s = new Dictionary<char, Texture2D>();
 
+    //
+    // Awake is called, regardless if the GameObject this script is attached to 
+    // is enabled/disabled, which in our case, is disabled. 
+    //
     private void Awake() {
         t0_l = new Texture2D(138, 155);
         t0_l.LoadImage(System.IO.File.ReadAllBytes("./Assets/images/Number_0.png"));
