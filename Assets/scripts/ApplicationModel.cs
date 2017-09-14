@@ -25,6 +25,8 @@ public class ApplicationModel : MonoBehaviour {
     static public string killMessage = "";
     static public float lastTime = 0.0f;
     static public bool isPaused = false;
+    static public int selectedLevelIndex;
+    static public string selectedLevelName;
 
     static public int isNotFirstTime() {
         return PlayerPrefs.GetInt("isNotFirstTime");
@@ -132,5 +134,9 @@ public class ApplicationModel : MonoBehaviour {
 
     static public void deleteStarCollected(int level, int num) {
         PlayerPrefs.DeleteKey("StarCollected_" + level.ToString() + "_" + num.ToString());
+    }
+
+    static public ILeaderboard getLeaderboard() {
+        return new Leaderboard_Test();
     }
 }

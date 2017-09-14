@@ -36,11 +36,11 @@ public class WelcomeScene : MonoBehaviour {
     }
 
     public void onStartGameButtonClick() {
-        SceneManager.LoadScene("Scene1");
+        selectLevel(1, "Scene1");
     }
 
     public void onStartGameButton2Click() {
-        SceneManager.LoadScene("Scene2");
+        selectLevel(1, "Scene2");
     }
 
     public void onHowToPlayButtonClick() {
@@ -49,5 +49,11 @@ public class WelcomeScene : MonoBehaviour {
 
     public void onSettingsButtonClick() {
         SceneManager.LoadScene("Settings");
+    }
+
+    private void selectLevel(int index, string name) {
+        ApplicationModel.selectedLevelIndex = index;
+        ApplicationModel.selectedLevelName = name;
+        SceneManager.LoadScene("Leaderboard");
     }
 }

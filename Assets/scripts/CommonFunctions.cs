@@ -31,5 +31,12 @@ public class CommonFunctions : MonoBehaviour {
         objectToControl.GetComponent<AudioSource>().clip = Config.audioHammer;
         objectToControl.GetComponent<AudioSource>().Play();
     }
+
+    public void selectLevel(string name) {
+        
+        ApplicationModel.selectedLevelName = name;
+        ApplicationModel.selectedLevelName = name;
+        SceneManager.LoadScene(name);
+    }
 }
 
