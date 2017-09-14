@@ -14,15 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/HowToPlay.unity
     guid: 3f091ebe2d074ff4c9e63d71e91713c3
-  - enabled: 0
-    path: 
-    guid: 52326aeb25fcf764db6897fda8facfec
   - enabled: 1
     path: Assets/scenes/Settings.unity
     guid: cc09ee76a6c31034cba4f80599f7007a
-  - enabled: 0
-    path: 
-    guid: ef3ef5dbb8f69f14bafc457ad6692eab
   - enabled: 1
     path: Assets/scenes/Scene2.unity
     guid: c860c74ed1e30c044ad038e1a3abc471
+  - enabled: 1
+    path: Assets/scenes/Leaderboard.unity
+    guid: 9a1fd6887486ba54a8b02772d3b24bdc
