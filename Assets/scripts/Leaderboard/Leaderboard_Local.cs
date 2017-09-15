@@ -78,6 +78,8 @@ public class Leaderboard_Local : ILeaderboard {
                 if (i > 24) {
                     leaderboard.Remove(record.Key);
                 }
+
+                i++;
             }
         }
     }
