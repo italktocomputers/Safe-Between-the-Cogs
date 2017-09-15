@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 
 public class Leaderboard_Test : ILeaderboard {
-	public Dictionary<string, float> getLeaderboard(int level, int limit, int offset) {
+    private int level;
+
+    public void init(int level) {
+
+    }
+
+	public Dictionary<string, float> get() {
         Dictionary<string, float> results = new Dictionary<string, float>();
 
         if (level == 1) {
@@ -32,12 +38,30 @@ public class Leaderboard_Test : ILeaderboard {
             results["Richard Stallman"] = 309.03f;
             results["Guido van Rossum"] = 309.79f;
             results["Bjarne Stroustrup"] = 310.09f;
+            results["Paul Allen"] = 310.09f;
+            results["Jeff Bezos"] = 310.88f;
+            results["Steve Wozniak"] = 311.04f;
+            results["Tim Cook"] = 315.98f;
+            results["Elon Musk"] = 317.22f;
+            results["Larry Page"] = 317.62f;
+            results["Mark Zuckerberg"] = 321.09f;
+            results["Eric Schmidt"] = 321.84f;
+
+
         }
 
         return results;
     }
+
+    public bool sync() {
+        return true;
+    }
     
-    public bool saveToLeaderboard(int level, string user, float score) {
+    public bool add(string user, float score) {
+        return true;
+    }
+
+    public bool flush() {
         return true;
     }
 }
