@@ -1956,7 +1956,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Leaderboard Name
+  m_Text: Leaderboard for this level
 --- !u!222 &496347697
 CanvasRenderer:
   m_ObjectHideFlags: 0
