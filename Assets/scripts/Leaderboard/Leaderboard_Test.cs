@@ -5,7 +5,7 @@ public class Leaderboard_Test : ILeaderboard {
     private int level;
 
     public void init(int level) {
-
+        this.level = level;
     }
 
 	public Dictionary<string, float> get() {
@@ -46,8 +46,6 @@ public class Leaderboard_Test : ILeaderboard {
             results["Larry Page"] = 317.62f;
             results["Mark Zuckerberg"] = 321.09f;
             results["Eric Schmidt"] = 321.84f;
-
-
         }
 
         return results;
