@@ -37,9 +37,8 @@ public class LeaderboardScene : MonoBehaviour {
 
     private void loadStats() {
         int i = 1;
-        ILeaderboard leaderboard = ApplicationModel.getLeaderboard();
-        leaderboard.init(ApplicationModel.selectedLevelIndex);
-        Dictionary<string, float> results = leaderboard.get();
+        ILeaderboard leaderboard = ApplicationModel.getLeaderboard(ApplicationModel.selectedLevelIndex);
+        List<KeyValuePair<string, float>> results = leaderboard.get();
         LeaderboardUI ui = GetComponent<LeaderboardUI>();
 
         foreach(KeyValuePair<string, float> record in results) {

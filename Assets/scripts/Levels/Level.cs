@@ -53,6 +53,7 @@ abstract public class Level : MonoBehaviour {
         canvasLevelCompleted.SetActive(true);
 
         LevelCompleteUI ui = canvasLevelCompleted.GetComponent<LevelCompleteUI>();
+        ILeaderboard leaderboard = ApplicationModel.getLeaderboard(ApplicationModel.selectedLevelIndex);
 
         string name = getLevelName();
 
@@ -65,6 +66,9 @@ abstract public class Level : MonoBehaviour {
         ui.setBestTime(bestTime);
         ui.setStarsCollected(GetComponent<StarManager>().totalStarsCollected);
         ui.setTotalStars(GetComponent<StarManager>().totalStars);
+
+        leaderboard.add(ApplicationModel.username, thisTime);
+        leaderboard.sync();
 
         ApplicationModel.saveLastTime(thisTime, name);
         

@@ -27,6 +27,7 @@ public class ApplicationModel : MonoBehaviour {
     static public bool isPaused = false;
     static public int selectedLevelIndex;
     static public string selectedLevelName;
+    static public string username = "Player1";
 
     static public int isNotFirstTime() {
         return PlayerPrefs.GetInt("isNotFirstTime");
@@ -136,7 +137,10 @@ public class ApplicationModel : MonoBehaviour {
         PlayerPrefs.DeleteKey("StarCollected_" + level.ToString() + "_" + num.ToString());
     }
 
-    static public ILeaderboard getLeaderboard() {
-        return new Leaderboard_Test();
+    static public ILeaderboard getLeaderboard(int level) {
+        ILeaderboard leaderboard = new Leaderboard_Local();
+        leaderboard.init(level);
+
+        return leaderboard;
     }
 }
