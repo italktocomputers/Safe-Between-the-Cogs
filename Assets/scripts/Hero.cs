@@ -32,22 +32,22 @@ public class Hero : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "LevelComplete") {
-            GetComponent<Level>().levelComplete();
+            GetComponent<GamePlayScene>().levelComplete();
         }
         else if (other.gameObject.tag == "Gear") {
-            GetComponent<Level>().GameOver();
+            GetComponent<GamePlayScene>().GameOver();
         }
         else if (other.gameObject.tag == "Fork") {
-            GetComponent<Level>().GameOver();
+            GetComponent<GamePlayScene>().GameOver();
         }
         else if (other.gameObject.tag == "Hammer") {
-            GetComponent<Level>().GameOver();
+            GetComponent<GamePlayScene>().GameOver();
         }
         else if (other.gameObject.tag == "Net") {
-            GetComponent<Level>().GameOver();
+            GetComponent<GamePlayScene>().GameOver();
         }
         else if (other.gameObject.tag == "RedBlock") {
-            GetComponent<Level>().GameOver();
+            GetComponent<GamePlayScene>().GameOver();
         }
     }
 }

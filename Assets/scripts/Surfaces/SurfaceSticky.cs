@@ -28,7 +28,7 @@ public class SurfaceSticky: ISurface {
             throw new System.Exception("Object must have a Transform Component!");
         }
 
-        if (objectToControl.GetComponent<Level>() == null) {
+        if (objectToControl.GetComponent<GamePlayScene>() == null) {
             throw new System.Exception("Object must have a Level Component!");
         }
 

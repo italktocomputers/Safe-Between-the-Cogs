@@ -28,7 +28,7 @@ public class SurfaceWater: ISurface {
             throw new System.Exception("Object must have a Transform Component!");
         }
 
-        if (objectToControl.GetComponent<Level>() == null) {
+        if (objectToControl.GetComponent<GamePlayScene>() == null) {
             throw new System.Exception("Object must have a Level Component!");
         }
 
@@ -69,7 +69,7 @@ public class SurfaceWater: ISurface {
 
     public void OnEnterTrigger(Collider2D other) {
         if (Mathf.Abs(objectToControl.GetComponent<Rigidbody2D>().velocity.y) >= 15.0f) {
-            objectToControl.GetComponent<Level>().GameOver("Killed by fall!");
+            objectToControl.GetComponent<GamePlayScene>().GameOver("Killed by fall!");
         }
         else {
             objectToControl.GetComponent<AudioSource>().clip = Config.audioSplash;

@@ -15,6 +15,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Globalization;
 
 public class ApplicationModel : MonoBehaviour {
@@ -136,7 +137,26 @@ public class ApplicationModel : MonoBehaviour {
         PlayerPrefs.DeleteKey("StarCollected_" + level.ToString() + "_" + num.ToString());
     }
 
-    static public ILeaderboard getLeaderboard() {
-        return new Leaderboard_Test();
+    static public ILeaderboard getLeaderboard(int level) {
+        ILeaderboard leaderboard = new Leaderboard_Local();
+        leaderboard.init(level);
+
+        return leaderboard;
+    }
+
+    static public GameStats getThisGameStats() {
+        return JsonUtility.FromJson<GameStats>(PlayerPrefs.GetString("ThisGame"));
+    }
+
+    static public void setThisGameStats(GameStats stats) {
+        PlayerPrefs.SetString("ThisGame", JsonUtility.ToJson(stats));
+    }
+
+    static public string getUsername() {
+        return PlayerPrefs.GetString("username");
+    }
+
+    static public void setUsername(string username) {
+        PlayerPrefs.SetString("username", username);
     }
 }

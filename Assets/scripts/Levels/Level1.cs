@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Level1 : Level {
+public class Level1 : MonoBehaviour, ILevel {
     public GameObject gear1;
     public GameObject gear2;
     public GameObject gear3;
@@ -63,7 +63,7 @@ public class Level1 : Level {
     public GameObject gearBlur11;
     public GameObject gearBlur12;
 
-    public override void disableALLGameObjects() {
+    public void disableAllGameObjects() {
         gear1.SetActive(false);
         gear2.SetActive(false);
         gear3.SetActive(false);
@@ -110,12 +110,12 @@ public class Level1 : Level {
         gearBlur12.SetActive(false);
     }
 
-    override public void init() {
+    public void init() {
         
     }
 
-    override public string getLevelName() {
-        return "1";
+    public string getLevelName() {
+        return "Scene1";
     }
 
     public void actionsForCheckpoint1() {

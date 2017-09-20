@@ -12,77 +12,44 @@
  * 
  */
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-abstract public class Level : MonoBehaviour {
-    public int sceneIndex;
-    public GameObject canvasLevelCompleted;
+public class GamePlayScene : MonoBehaviour {
     public GameObject pauseWindow;
-    public GameObject thisTimeGameObj;
-    public GameObject lastTimeGameObj;
-    public GameObject bestTimeGameObj;
-    public GameObject congratsMsg;
-    public GameObject starsCollectedObj;
-    public GameObject starsTotalObj;
-
-    abstract public void init();
-    abstract public void disableALLGameObjects();
-    abstract public string getLevelName();
 
     private void Start() {
         CheckpointManager checkpointManager = GetComponent<CheckpointManager>();
-
         GetComponent<Timer>().startTimer();
-
         Config.init();
 
         if (checkpointManager.spawningEnabled == true) {
-            disableALLGameObjects();
+            GetComponent<ILevel>().disableAllGameObjects();
         }
 
-        init();
+        GetComponent<ILevel>().init();
     }
 
     public void levelComplete() {
         GetComponent<Timer>().stopTimer();
-        canvasLevelCompleted.SetActive(true);
 
-        LevelCompleteUI ui = canvasLevelCompleted.GetComponent<LevelCompleteUI>();
+        GameStats stats = new GameStats(
+            GetComponent<ILevel>().getLevelName(),
+            GetComponent<Timer>().getSeconds(), 
+            GetComponent<StarManager>().totalStarsCollected,
+            GetComponent<StarManager>().totalStars
+        );
 
-        string name = getLevelName();
-
-        float thisTime = GetComponent<Timer>().getSeconds();
-        float lastTime = ApplicationModel.getLastTime(name);
-        float bestTime = ApplicationModel.getBestTime(name);
-
-        ui.setThisTime(thisTime);
-        ui.setLastTime(lastTime);
-        ui.setBestTime(bestTime);
-        ui.setStarsCollected(GetComponent<StarManager>().totalStarsCollected);
-        ui.setTotalStars(GetComponent<StarManager>().totalStars);
-
-        ApplicationModel.saveLastTime(thisTime, name);
-        
-        if (bestTime == 0 || thisTime < bestTime) {
-            // This is the new best time!
-            ApplicationModel.saveBestTime(thisTime, name);
-            //bestTimeLabel.text = Timer.clockify(thisTime);
-            //congratsMsg.SetActive(true);
-
-            if (ApplicationModel.getSaveScoreToLBSetting() == 1) {
-                //FacebookHelper.SaveScore(thisTime, null);
-            }
-        }
-        else {
-            //bestTimeLabel.text = Timer.clockify(bestTime);
-        }
+        ApplicationModel.setThisGameStats(stats);
+        ApplicationModel.saveLastTime(GetComponent<Timer>().getSeconds(), name);
 
         clearLevelData();
+
+        SceneManager.LoadScene("GameOver");
     }
 
     public void pause() {
@@ -107,11 +74,11 @@ abstract public class Level : MonoBehaviour {
     }
 
     public void exitGame() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Welcome");
     }
 
     public void resetGame() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Welcome");
         clearLevelData();
     }
 
@@ -132,9 +99,9 @@ abstract public class Level : MonoBehaviour {
         if (message != "") {
             ApplicationModel.killMessage = message;
         }
-        
+
         // Reset Scene
-        SceneManager.LoadScene(GetComponent<Level>().sceneIndex);
+        SceneManager.LoadScene(GetComponent<ILevel>().getLevelName());
     }
 
     public static void resetLevelSettings() {

@@ -16,9 +16,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+using UnityEngine.SceneManagement;
 
-public class LevelCompleteUI : MonoBehaviour {
+public class GameOverScene : MonoBehaviour {
+    public GameObject copyright;
+
     public GameObject thisTimeM1;
     public GameObject thisTimeM2;
     public GameObject thisTimeS1;
@@ -72,11 +74,10 @@ public class LevelCompleteUI : MonoBehaviour {
     private Dictionary<char, Texture2D> map_l = new Dictionary<char, Texture2D>();
     private Dictionary<char, Texture2D> map_s = new Dictionary<char, Texture2D>();
 
-    //
-    // Awake is called, regardless if the GameObject this script is attached to 
-    // is enabled/disabled, which in our case, is disabled. 
-    //
-    private void Awake() {
+    private void Start() {
+        Time.timeScale = 1.0f;
+        copyright.GetComponent<Text>().text = ApplicationModel.getCopyrightString();
+
         t0_l = new Texture2D(138, 155);
         t0_l.LoadImage(System.IO.File.ReadAllBytes("./Assets/images/Number_0.png"));
 
@@ -174,6 +175,25 @@ public class LevelCompleteUI : MonoBehaviour {
         map_s.Add('9', t9_s);
         map_s.Add('.', tPeriod_s);
         map_s.Add(':', tColon_s);
+
+        GameStats stats = ApplicationModel.getThisGameStats();
+
+        float lastTime = ApplicationModel.getLastTime(ApplicationModel.selectedLevelName);
+        float bestTime = ApplicationModel.getBestTime(ApplicationModel.selectedLevelName);
+
+        // Update UI
+        setThisTime(stats.time);
+        setLastTime(lastTime);
+        setBestTime(bestTime);
+        setStarsCollected(stats.starsCollected);
+        setTotalStars(stats.totalStarsInLevel);
+
+        // Save this new best time
+        if (bestTime == 0 || stats.time < bestTime) {
+            ApplicationModel.saveBestTime(stats.time, name);
+        }
+
+        ApplicationModel.saveLastTime(stats.time, ApplicationModel.selectedLevelName);
     }
 
     public void setThisTime(float time) {
@@ -252,5 +272,27 @@ public class LevelCompleteUI : MonoBehaviour {
         }
 
         return sprites;
+    }
+
+    public void onForwardButtonClick() {
+        GameStats stats = ApplicationModel.getThisGameStats();
+        ILeaderboard leaderboard = ApplicationModel.getLeaderboard(ApplicationModel.selectedLevelIndex);
+
+        List<KeyValuePair<string, float>> records = leaderboard.get();
+
+        if (records.Count < 24) {
+            SceneManager.LoadScene("Congrats");
+        }
+        else {
+            int index = records.Count - 1;
+            KeyValuePair<string, float> lastRecord = records[index];
+
+            if (stats.time < lastRecord.Value) {
+                SceneManager.LoadScene("Congrats");
+            }
+            else {
+                SceneManager.LoadScene("Welcome");
+            }
+        }
     }
 }

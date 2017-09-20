@@ -40,7 +40,7 @@ public class WelcomeScene : MonoBehaviour {
     }
 
     public void onStartGameButton2Click() {
-        selectLevel(1, "Scene2");
+        selectLevel(2, "Scene2");
     }
 
     public void onHowToPlayButtonClick() {

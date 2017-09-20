@@ -47,7 +47,7 @@ public class InputManager : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape) == true) {
-            GetComponent<Level>().togglePause();
+            GetComponent<GamePlayScene>().togglePause();
         }
 
         if (Input.GetKeyDown(KeyCode.Z) == true) {
