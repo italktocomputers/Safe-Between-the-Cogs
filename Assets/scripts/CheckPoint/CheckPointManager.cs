@@ -104,7 +104,7 @@ public class CheckpointManager : MonoBehaviour {
                     level
                 );
 
-                SceneManager.LoadScene(GetComponent<Level>().sceneIndex);
+                SceneManager.LoadScene(GetComponent<ILevel>().getLevelName());
             }
         }
     }

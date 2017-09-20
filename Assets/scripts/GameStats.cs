@@ -12,12 +12,16 @@
  * 
  */
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+public class GameStats {
+    public string levelName;
+    public float time;
+    public int starsCollected;
+    public int totalStarsInLevel;
 
-interface ILevel {
-    void disableAllGameObjects();
-    string getLevelName();
-    void init();
+    public GameStats(string levelName, float time, int starsCollected, int totalStarsInLevel) {
+        this.levelName = levelName;
+        this.time = time;
+        this.starsCollected = starsCollected;
+        this.totalStarsInLevel = totalStarsInLevel;
+    }
 }

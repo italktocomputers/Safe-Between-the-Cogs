@@ -15,6 +15,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Globalization;
 
 public class ApplicationModel : MonoBehaviour {
@@ -27,7 +28,6 @@ public class ApplicationModel : MonoBehaviour {
     static public bool isPaused = false;
     static public int selectedLevelIndex;
     static public string selectedLevelName;
-    static public string username = "Player1";
 
     static public int isNotFirstTime() {
         return PlayerPrefs.GetInt("isNotFirstTime");
@@ -142,5 +142,21 @@ public class ApplicationModel : MonoBehaviour {
         leaderboard.init(level);
 
         return leaderboard;
+    }
+
+    static public GameStats getThisGameStats() {
+        return JsonUtility.FromJson<GameStats>(PlayerPrefs.GetString("ThisGame"));
+    }
+
+    static public void setThisGameStats(GameStats stats) {
+        PlayerPrefs.SetString("ThisGame", JsonUtility.ToJson(stats));
+    }
+
+    static public string getUsername() {
+        return PlayerPrefs.GetString("username");
+    }
+
+    static public void setUsername(string username) {
+        PlayerPrefs.SetString("username", username);
     }
 }

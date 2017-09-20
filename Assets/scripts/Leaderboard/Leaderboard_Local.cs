@@ -1,4 +1,18 @@
-﻿using System.Collections;
+﻿/*
+ * Copyright (C) 2017 Andrew Schools
+ * 
+ * This program is free software: you can redistribute it and/or modify it under the terms 
+ * of the GNU General Public License as published by the Free Software Foundation, either 
+ * version 3 of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ * See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program. 
+ * If not, see http://www.gnu.org/licenses/.
+ * 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
@@ -36,11 +50,13 @@ public class Leaderboard_Local : ILeaderboard {
     }
 
     public bool flush() {
-        PlayerPrefs.SetString("Leaderboard_" + level.ToString(), "");
+        PlayerPrefs.SetString("Leaderboard_" + level.ToString(), null);
         return true;
     }
 
     private string serialize(List<KeyValuePair<string, float>> data) {
+        //return JsonUtility.ToJson(data);
+
         int i = 0;
         string str = "";
 
@@ -57,6 +73,8 @@ public class Leaderboard_Local : ILeaderboard {
     }
 
     private List<KeyValuePair<string, float>> deserialize(string data) {
+        //return JsonUtility.FromJson<List<KeyValuePair<string, float>>>(data);
+
         List<KeyValuePair<string, float>> leaderboard = new List<KeyValuePair<string, float>>();
         string[] records = data.Split('|');
 
@@ -79,15 +97,18 @@ public class Leaderboard_Local : ILeaderboard {
     //
     private void clean() {
         int i = 1;
+        List<KeyValuePair<string, float>> newLeaderboard = new List<KeyValuePair<string, float>>();
 
         if (leaderboard.Count > 24) {
             foreach (KeyValuePair<string, float> record in leaderboard) {
-                if (i > 24) {
-                    leaderboard.Remove(record);
+                if (i++ > 24) {
+                    break;
                 }
 
-                i++;
+                newLeaderboard.Add(record);
             }
         }
+
+        leaderboard = newLeaderboard;
     }
 }

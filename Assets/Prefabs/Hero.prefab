@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 114860657693114096}
   - component: {fileID: 114611812592665424}
   - component: {fileID: 114510791547717398}
+  - component: {fileID: 114510338692574518}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Hero
@@ -2654,6 +2655,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &114510338692574518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163967274148392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abcc0126cf55e34b98962074f92d242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseWindow: {fileID: 1042822744272598, guid: cf921e22193c6af488c89de4e1ad163d,
+    type: 2}
 --- !u!114 &114510791547717398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2884,15 +2898,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97eb6c569be96144ea1c15564faf28eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 1
-  canvasLevelCompleted: {fileID: 1492165132943370}
-  pauseWindow: {fileID: 1605675591807906}
-  thisTimeGameObj: {fileID: 0}
-  lastTimeGameObj: {fileID: 0}
-  bestTimeGameObj: {fileID: 0}
-  congratsMsg: {fileID: 0}
-  starsCollectedObj: {fileID: 0}
-  starsTotalObj: {fileID: 0}
   gear1: {fileID: 0}
   gear2: {fileID: 0}
   gear3: {fileID: 0}

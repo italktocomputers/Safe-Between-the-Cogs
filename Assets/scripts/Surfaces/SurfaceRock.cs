@@ -28,7 +28,7 @@ public class SurfaceRock: ISurface {
             throw new System.Exception("Object must have a Transform Component!");
         }
 
-        if (objectToControl.GetComponent<Level>() == null) {
+        if (objectToControl.GetComponent<GamePlayScene>() == null) {
             throw new System.Exception("Object must have a Level Component!");
         }
 
@@ -62,7 +62,7 @@ public class SurfaceRock: ISurface {
     public void OnEnter(Collision2D collision) {
         //Debug.Log(collision.relativeVelocity.magnitude);
         if (collision.relativeVelocity.magnitude >= 8.0f) {
-            objectToControl.GetComponent<Level>().GameOver("Killed by fall!");
+            objectToControl.GetComponent<GamePlayScene>().GameOver("Killed by fall!");
         }
     }
     
