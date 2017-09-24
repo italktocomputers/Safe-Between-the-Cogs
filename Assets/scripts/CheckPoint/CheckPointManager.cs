@@ -18,7 +18,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class CheckpointManager : MonoBehaviour {
+public class CheckPointManager : MonoBehaviour {
     public bool spawningEnabled = true;
     public int level;
 
@@ -36,14 +36,14 @@ public class CheckpointManager : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Checkpoint") {
-            CheckpointType checkpoint = new CheckpointType(
+            CheckPointType checkpoint = new CheckPointType(
                 other.gameObject.GetComponent<Transform>().position.x,
                 other.gameObject.GetComponent<Transform>().position.y,
                 GetComponent<Timer>().getSeconds()
             );
 
             ApplicationModel.setLastSavedCheckpoint(checkpoint, level);
-            other.gameObject.GetComponent<Checkpoint>().e.Invoke();
+            other.gameObject.GetComponent<CheckPoint>().e.Invoke();
             showCheckpointMsg();
         }
     }
@@ -64,7 +64,7 @@ public class CheckpointManager : MonoBehaviour {
             ApplicationModel.killMessage = "";
         }
 
-        CheckpointType checkpoint = ApplicationModel.getLastSavedCheckpoint(level);
+        CheckPointType checkpoint = ApplicationModel.getLastSavedCheckpoint(level);
 
         if (checkpoint != null) {
             // Spawn player last checkpoint reached
@@ -96,7 +96,7 @@ public class CheckpointManager : MonoBehaviour {
             if (checkpoints[i].name == "Checkpoint"+ (selectedIndex+1).ToString()) {
                 // Save choice and load scene
                 ApplicationModel.setLastSavedCheckpoint(
-                    new CheckpointType(
+                    new CheckPointType(
                         checkpoints[i].gameObject.transform.position.x, 
                         checkpoints[i].gameObject.transform.position.y, 
                         0.0f
@@ -109,7 +109,7 @@ public class CheckpointManager : MonoBehaviour {
         }
     }
 
-    public void spawn(CheckpointType checkpoint) {
+    public void spawn(CheckPointType checkpoint) {
         transform.position = new Vector2(
             checkpoint.x,
             checkpoint.y

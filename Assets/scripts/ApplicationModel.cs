@@ -100,7 +100,7 @@ public class ApplicationModel : MonoBehaviour {
         PlayerPrefs.SetInt("Setting_SaveScoreToLB", choice);
     }
 
-    static public CheckpointType getLastSavedCheckpoint(int level) {
+    static public CheckPointType getLastSavedCheckpoint(int level) {
         String data = PlayerPrefs.GetString("LastSavedCheckpoint_" + level.ToString());
         String[] parts = data.Split(',');
 
@@ -112,11 +112,11 @@ public class ApplicationModel : MonoBehaviour {
             float y = float.Parse(parts[1], CultureInfo.InvariantCulture.NumberFormat);
             float time = float.Parse(parts[2], CultureInfo.InvariantCulture.NumberFormat);
 
-            return new CheckpointType(x, y, time);
+            return new CheckPointType(x, y, time);
         }
     }
 
-    static public void setLastSavedCheckpoint(CheckpointType checkpoint, int level) {
+    static public void setLastSavedCheckpoint(CheckPointType checkpoint, int level) {
         if (checkpoint == null) {
             PlayerPrefs.SetString("LastSavedCheckpoint_" + level.ToString(), null);
         }

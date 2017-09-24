@@ -17,6 +17,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Checkpoint : MonoBehaviour {
+public class CheckPoint : MonoBehaviour {
     public UnityEvent e;
 }

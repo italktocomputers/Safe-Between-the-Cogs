@@ -23,7 +23,7 @@ public class GamePlayScene : MonoBehaviour {
     public GameObject pauseWindow;
 
     private void Start() {
-        CheckpointManager checkpointManager = GetComponent<CheckpointManager>();
+        CheckPointManager checkpointManager = GetComponent<CheckPointManager>();
         GetComponent<Timer>().startTimer();
         Config.init();
 
@@ -83,7 +83,7 @@ public class GamePlayScene : MonoBehaviour {
     }
 
     public void clearLevelData() {
-        GetComponent<CheckpointManager>().clearSavedCheckpoint();
+        GetComponent<CheckPointManager>().clearSavedCheckpoint();
         GetComponent<StarManager>().clearSavedStars();
     }
 
