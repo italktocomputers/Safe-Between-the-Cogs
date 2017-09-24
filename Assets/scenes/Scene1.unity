@@ -19297,7 +19297,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 927467301}
+      objectReference: {fileID: 927467316}
     - target: {fileID: 114994243444411242, guid: cf921e22193c6af488c89de4e1ad163d,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -19312,7 +19312,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 927467301}
+      objectReference: {fileID: 927467316}
     - target: {fileID: 223474855409400828, guid: cf921e22193c6af488c89de4e1ad163d,
         type: 2}
       propertyPath: m_Camera
@@ -19322,7 +19322,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 927467301}
+      objectReference: {fileID: 927467316}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf921e22193c6af488c89de4e1ad163d, type: 2}
   m_IsPrefabParent: 0
