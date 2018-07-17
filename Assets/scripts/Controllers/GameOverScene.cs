@@ -231,7 +231,7 @@ public class GameOverScene : MonoBehaviour {
             this.starsCollected2.GetComponent<Image>().sprite = sprites[1];
         }
         else {
-            this.starsCollected1.GetComponent<Image>().sprite = new Sprite();
+            this.starsCollected1.GetComponent<Image>().sprite = Sprite.Create(sprites[0].texture, sprites[0].rect, sprites[0].pivot);
             this.starsCollected1.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
             this.starsCollected2.GetComponent<Image>().sprite = sprites[0];
         }
@@ -245,7 +245,7 @@ public class GameOverScene : MonoBehaviour {
             this.totalStars2.GetComponent<Image>().sprite = sprites[1];
         }
         else {
-            this.totalStars1.GetComponent<Image>().sprite = new Sprite();
+            this.totalStars1.GetComponent<Image>().sprite = Sprite.Create(sprites[0].texture, sprites[0].rect, sprites[0].pivot);
             this.totalStars1.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
             this.totalStars2.GetComponent<Image>().sprite = sprites[0];
         }
